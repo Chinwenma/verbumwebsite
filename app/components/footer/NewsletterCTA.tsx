@@ -1,41 +1,44 @@
 'use client';
 
-import { FC } from 'react';
+import { useState } from 'react';
 
-const NewsletterCTA: FC = () => {
- 
+export default function Newsletter() {
+  const [email, setEmail] = useState('');
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email) return;
+    // TODO: Handle email submission logic
+    alert(`Subscribed with: ${email}`);
+    setEmail('');
+  };
 
   return (
-    <section className="w-full bg-white py-12 px-4 flex justify-center">
-      <div className="w-full max-w-xl text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
-          Subscribe to our Newsletter
-        </h2>
-        <p className="text-gray-600 mb-6">
-          Stay updated with our latest news, resources, and insights.
-        </p>
-
-        <form
-       
-          className="flex items-stretch w-full max-w-lg mx-auto"
+    <section className="w-full bg-white text-center py-12 border-t-4 border-red-800">
+      <p className="text-red-800 text-sm sm:text-base mb-2">
+        Subscribe to get <strong>FREE</strong> notifications on every update from us!
+      </p>
+      <h2 className="text-3xl sm:text-4xl font-bold text-red-800 mb-6">Email Newsletter</h2>
+      
+      <form
+        onSubmit={handleSubmit}
+        className="flex flex-col sm:flex-row justify-center items-center gap-4 px-4"
+      >
+        <input
+          type="email"
+          required
+          placeholder="Your email here"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+          className="w-full sm:w-[300px] md:w-[400px] px-4 py-3 border border-gray-400 rounded focus:outline-none focus:ring-2 focus:ring-red-500"
+        />
+        <button
+          type="submit"
+          className="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-3 rounded w-full sm:w-auto transition duration-300"
         >
-          <input
-            type="email"
-            required
-            placeholder="Your email here"
-           
-            className="flex-1 px-4 py-3 rounded-l-md border border-[#0C1A2B] outline-none"
-          />
-          <button
-            type="submit"
-            className="bg-red-600 text-white px-6 py-3 rounded-r-md hover:bg-red-700 transition"
-          >
-            Subscribe
-          </button>
-        </form>
-      </div>
+          Subscribe
+        </button>
+      </form>
     </section>
   );
-};
-
-export default NewsletterCTA;
+}

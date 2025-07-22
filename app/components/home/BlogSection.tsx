@@ -4,45 +4,7 @@ import { FC } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  image: string;
-  slug: string;
-}
-
-const blogs: BlogPost[] = [
-  {
-    id: '1',
-    title: 'How to Build Scalable Web Apps with Next.js',
-    excerpt: 'Discover modern strategies to scale your app architecture using the latest features in Next.js 15.',
-    image: '/assets/hero24.jpg',
-    slug: '/blog/nextjs-scalability',
-  },
-  {
-    id: '2',
-    title: 'Design Tips for Developer Portfolios',
-    excerpt: 'First impressions matter. Here are practical tips to make your portfolio stand out visually and technically.',
-    image: '/assets/hero25.jpg',
-    slug: '/blog/portfolio-design',
-  },
-  {
-    id: '3',
-    title: 'Integrating AI Tools in Your Workflow',
-    excerpt: 'Explore how AI-powered tools can improve productivity in frontend and backend development.',
-    image: '/assets/hero26.jpg',
-    slug: '/blog/ai-in-dev',
-  },
-  {
-    id: '4',
-    title: 'Mastering Tailwind CSS Responsiveness',
-    excerpt: 'Make your UI shine across devices with these powerful Tailwind CSS techniques.',
-    image: '/assets/hero27.jpg',
-    slug: '/blog/tailwind-responsive',
-  },
-];
+import { blogs } from '@/app/constants/Constant';
 
 const BlogSection: FC = () => {
   return (

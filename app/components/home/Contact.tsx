@@ -1,5 +1,5 @@
 "use client";
-import React, { ChangeEvent, FC, FormEvent, useState } from "react";
+import React, { FC} from "react";
 import Link from "next/link";
 
 const Contact: FC = () => {

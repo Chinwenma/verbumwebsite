@@ -1,21 +1,19 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-   --primary-color: hsl(0, 100%, 50%);
-  --primary-color-light: rgb(249, 54, 36);
-  --primary-color-dark: hsl(0, 100%, 28%);
-  --secondary-color: hsl(207, 34%, 50%);
-  --secondary-color-light: hsl(208, 90%, 76%);
-  --secondary-color-dark: rgb(36, 72, 96);
-  --gray-100: hsl(0, 0%, 100%);
-  --gray-300: #d7e6ef;
-  --gray-500: hsl(202, 12%, 57%);
-  --gray-700: hsl(206, 25%, 16%);
-  --gray-900: hsl(210, 100%, 5%);
-  --black-light: rgb(25, 25, 25);
-  --black-dark: rgb(0, 0, 0);
+  --main-color: #ff0000;
+  --main-color-light: #f93624;
+  --main-color-dark: #8f0000;
+  --master-color: #5484ab;
+  --master-color-light: #8bc5f9;
+  --secondary-color-dark: #244860;
+  --grayy-100: #ffffff;
+  --grayy-300: #d7e6ef;
+  --grayy-500: #84959f;
+  --grayy-700: #1f2a33;
+  --grayy-900: #000d1a;
+  --blacky-light: #191919;
+  --blacky-dark: #000000;
 
   --header-height: 3.5rem;
 
@@ -28,8 +26,8 @@
   --small-font-size: 0.813rem;
   --smaller-font-size: 0.75rem;
 
-  --font-regular: 300;
-  --font-medium: 500;
+  --font-regularr: 300;
+  --font-mediumm: 500;
   --font-semi-bold: 600;
   --font-bold: 800;
 
@@ -38,22 +36,189 @@
   --cursive-family: 'Dancing Script', cursive;
 }
 
-@theme inline {
+@layer utilities {
+  /* Text Colors */
+  .text-main {
+    color: var(--main-color);
+  }
+  .text-main-light {
+    color: var(--main-color-light);
+  }
+  .text-main-dark {
+    color: var(--main-color-dark);
+  }
+  .text-master {
+    color: var(--master-color);
+  }
+  .text-master-light {
+    color: var(--master-color-light);
+  }
+  .text-master-dark {
+    color: var(--master-color-dark);
+  }
+  .text-grayy-100 {
+    color: var(--grayy-100);
+  }
+  .text-grayy-300 {
+    color: var(--grayy-300);
+  }
+  .text-grayy-500 {
+    color: var(--grayy-500);
+  }
+  .text-grayy-700 {
+    color: var(--grayy-700);
+  }
+  .text-grayy-900 {
+    color: var(--grayy-900);
+  }
+  .text-black-light {
+    color: var(--black-light);
+  }
+  .text-black-dark {
+    color: var(--black-dark);
+  }
+
+  /* Hover Text Colors */
+  /* .hover\:text-primary:hover {
+    color: var(--primary-color);
+  }
+  .hover\:text-primary-light:hover {
+    color: var(--primary-color-light);
+  }
+  .hover\:text-primary-dark:hover {
+    color: var(--primary-color-dark);
+  }
+  .hover\:text-secondary:hover {
+    color: var(--secondary-color);
+  }
+  .hover\:text-secondary-light:hover {
+    color: var(--secondary-color-light);
+  }
+  .hover\:text-secondary-dark:hover {
+    color: var(--secondary-color-dark);
+  } */
+
+  /* Background Colors */
+  .bg-main {
+    background-color: var(--main-color);
+  }
+  .bg-main-light {
+    background-color: var(--main-color-light);
+  }
+  .bg-main-dark {
+    background-color: var(--main-color-dark);
+  }
+  .bg-master {
+    background-color: var(--master-color);
+  }
+  .bg-master-light {
+    background-color: var(--master-color-light);
+  }
+  .bg-master-dark {
+    background-color: var(--master-color-dark);
+  }
+  .bg-grayy-100 {
+    background-color: var(--grayy-100);
+  }
+  .bg-grayy-300 {
+    background-color: var(--grayy-300);
+  }
+  .bg-grayy-500 {
+    background-color: var(--gray-500);
+  }
+  .bg-grayy-700 {
+    background-color: var(--grayy-700);
+  }
+  .bg-grayy-900 {
+    background-color: var(--grayy-900);
+  }
+  .bg-blacky-light {
+    background-color: var(--blacky-light);
+  }
+  .bg-blacky-dark {
+    background-color: var(--blacky-dark);
+  }
+
+  /* Font Families */
+  .font-serif {
+    font-family: var(--serif-family);
+  }
+  .font-sans {
+    font-family: var(--sans-family);
+  }
+  .font-cursive {
+    font-family: var(--cursive-family);
+  }
+
+  /* Font Sizes */
+  .text-biggest {
+    font-size: var(--biggest-font-size);
+  }
+  .text-big {
+    font-size: var(--big-font-size);
+  }
+  .text-h1 {
+    font-size: var(--h1-font-size);
+  }
+  .text-h2 {
+    font-size: var(--h2-font-size);
+  }
+  .text-h3 {
+    font-size: var(--h3-font-size);
+  }
+  .text-normal {
+    font-size: var(--normal-font-size);
+  }
+  .text-small {
+    font-size: var(--small-font-size);
+  }
+  .text-smaller {
+    font-size: var(--smaller-font-size);
+  }
+
+  /* Font Weights */
+  .font-regularr {
+    font-weight: var(--font-regularr);
+  }
+  .font-mediumm {
+    font-weight: var(--font-mediumm);
+  }
+  .font-semi-bold {
+    font-weight: var(--font-semi-bold);
+  }
+  .font-bold {
+    font-weight: var(--font-bold);
+  }
+
+  /* Header height */
+  .h-header {
+    height: var(--header-height);
+  }
+}
+
+/* Global Resets */
+* {
+  box-sizing: border-box;
+  font-family: var(--sans-family);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+
+/* @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
-}

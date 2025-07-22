@@ -59,14 +59,7 @@ export const Footer = () => {
             <li>Behind MRS Filling Station Uwani Enugu</li>
             <li>+2349057054137</li>
             <li>info@verbumnetworksenugu.com</li>
-            <li>
-              <button
-                onClick={() => signIn()}
-                className="text-blue-400 hover:underline"
-              >
-                Sign in
-              </button>
-            </li>
+         
           </ul>
 
           {/* Donate Button */}
