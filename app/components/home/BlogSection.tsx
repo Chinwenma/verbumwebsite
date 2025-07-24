@@ -1,25 +1,29 @@
-'use client';
+"use client";
 
-import { FC } from 'react';
-import Image from 'next/image';
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { blogs } from '@/app/constants/Constant';
+import { FC } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { motion } from "framer-motion";
+import { blogs } from "@/app/constants/Constant";
 
 const BlogSection: FC = () => {
   return (
     <section className="w-full py-12 px-4 flex flex-col items-center gap-10">
-      <motion.div initial={{ opacity: 0, y: -20 }}
+      <motion.div
+        initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        transition={{ duration: 0.5 }}> 
-      <h2
-        className="text-3xl md:text-4xl font-serif font-semibold text-gray-800"
-        
+        transition={{ duration: 0.5 }}
       >
-        Latest Blog Posts
-      </h2>
-        </motion.div>
+        <h2 className="text-3xl md:text-4xl font-serif  text-center font-semibold text-gray-800">
+          Latest Blog Posts
+        </h2>
+        <p className=" font-serif font-normal text-gray-700 text-center mb-12 max-w-2xl mx-auto">
+          Stay informed with the latest insights, trends, and practical tips on
+          technology, digital transformation, and innovation in today’s
+          fast-paced world.{" "}
+        </p>
+      </motion.div>
 
       <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
         {blogs.map((post, i) => (
@@ -40,7 +44,9 @@ const BlogSection: FC = () => {
               />
             </div>
             <div className="p-4 space-y-2">
-              <h3 className="text-lg font-semibold text-gray-800">{post.title}</h3>
+              <h3 className="text-lg font-semibold text-gray-800">
+                {post.title}
+              </h3>
               <p className="text-sm text-gray-600">{post.excerpt}</p>
               <Link
                 href={post.slug}

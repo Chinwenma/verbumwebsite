@@ -7,6 +7,7 @@ import { motion } from "framer-motion";
 const AboutSection = () => {
   return (
     <section className="w-full py-16 px-4 md:px-20 bg-[#d7e6ef]">
+      
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center text-secondary-light">
         <motion.div
           initial={{ opacity: 0, x: -50 }}
@@ -14,10 +15,11 @@ const AboutSection = () => {
           transition={{ duration: 0.8, ease: "easeOut" }}
           viewport={{ once: true }}
         >
+        
           <h2 className="text-3xl md:text-5xl font-bold mb-6 bg-gradient-to-b from-black to-red-500 text-transparent bg-clip-text">
             Get to know Verbum Networks limited
           </h2>
-          <p className="text-gray-800 mb-6">
+          <p className="text-gray-900 mb-6">
             Verbum Networks is an Information and Communications Technology
             Solutions Provider, owned and managed by the Dominican Fathers and
             Brothers of Nigeria and Ghana. The firm is licensed by the Nigerian
@@ -26,11 +28,11 @@ const AboutSection = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-             {/* <div className="mt-6 flex gap-4 flex-wrap justify-center"> */}
+            {/* <div className="mt-6 flex gap-4 flex-wrap justify-center"> */}
             <Button
               link="/about"
               label="Learn More"
-              // className="px-6 py-3 rounded-md"
+              className="sm:w-auto transition duration-300"
             />
           </div>
         </motion.div>

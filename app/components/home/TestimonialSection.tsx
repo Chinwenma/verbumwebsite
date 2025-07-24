@@ -1,10 +1,10 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { FC, useState, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { testimonials } from '@/app/constants/Constant';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
+import Image from "next/image";
+import { FC, useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { testimonials } from "@/app/constants/Constant";
+import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const TestimonialSection: FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -17,9 +17,9 @@ const TestimonialSection: FC = () => {
     };
 
     handleResize(); // Set on first render
-    window.addEventListener('resize', handleResize); // Listen for changes
+    window.addEventListener("resize", handleResize); // Listen for changes
 
-    return () => window.removeEventListener('resize', handleResize);
+    return () => window.removeEventListener("resize", handleResize);
   }, []);
 
   const totalSlides = Math.ceil(testimonials.length / itemsPerSlide);
@@ -39,10 +39,18 @@ const TestimonialSection: FC = () => {
 
   return (
     <section className="w-full bg-[#8f0000] py-12 px-4 relative">
-      <div className="text-center mb-10">
-        <p className="text-gray-100 font-sans text-base">What people are saying about us</p>
-        <h2 className="text-3xl md:text-4xl font-serif font-semibold text-white">Testimonials</h2>
-      </div>
+     <motion.div initial={{ opacity: 0, y: -20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5 }}> 
+      <h2
+        className="text-3xl md:text-4xl font-serif font-semibold text-gray-100 text-center"
+        
+      >
+      Testimonials
+      </h2>
+      <p className=" font-serif font-normal text-gray-100 text-center mb-12 max-w-2xl mx-auto">Our commitment to excellence has earned us the trust and appreciation of clients, partners, and learners alike. Discover their stories and successes. </p>
+        </motion.div>
 
       <div className="relative flex flex-col items-center">
         {/* Left Icon */}
@@ -80,12 +88,18 @@ const TestimonialSection: FC = () => {
 
                 <div className="text-center mt-6 space-y-4">
                   <p className="text-sm text-gray-100 relative px-4">
-                    <span className="text-5xl absolute -top-4 left-2 text-red-500 font-serif">“</span>
+                    <span className="text-5xl absolute -top-4 left-2 text-red-500 font-serif">
+                      “
+                    </span>
                     {testimonial.text}
-                    <span className="text-5xl absolute -bottom-4 right-2 text-red-500 font-serif">”</span>
+                    <span className="text-5xl absolute -bottom-4 right-2 text-red-500 font-serif">
+                      ”
+                    </span>
                   </p>
                   <div>
-                    <h4 className="text-lg font-semibold text-white">{testimonial.name}</h4>
+                    <h4 className="text-lg font-semibold text-white">
+                      {testimonial.name}
+                    </h4>
                     <p className="text-sm text-gray-300">{testimonial.role}</p>
                   </div>
                 </div>

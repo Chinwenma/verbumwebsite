@@ -169,40 +169,69 @@ export const services: ServiceItem[] = [
 
 
 interface TeamMember {
+  id: number; // Optional for flexibility
   name: string;
   role: string;
   image: string;
-  twitter?: string;
-  linkedin?: string;
 }
 
 export const team: TeamMember[] = [
   {
+    id: 1,
     name: 'Rev. Chukwu Paul Emmanuel, OP',
     role: 'Director',
     image: '/assets/ahsbf-k01y6.avif',
   },
   {
+    id: 2,
     name: 'Engr. Paulinus O. Ezeh',
     role: 'Admin Manager',
     image: '/assets/avqkr-kv2ew.avif',
   },
    {
+    id: 3,
     name: 'Ms Immaculata Uzendu',
     role: 'Accountant',
     image: '/assets/alyr5-oz1r6.avif',
   },
   {
+    id: 4,
     name: 'Engr. Paulinus O. Ezeh',
     role: 'HOD, Networking',
     image: '/assets/avqkr-kv2ew.avif',
   },
   {
+    id: 5,
     name: 'Engr. Uchenna Marcel Obiefuna',
     role: 'HOD, Web Development',
     image: '/assets/alyr5-oz1r6.avif',
   },
    {
+    id: 6,
+    name: 'Ms Chinwenma Okorie',
+    role: 'HOD, Marketing',
+    image: '/assets/alyr5-oz1r6.avif',
+  },
+    {
+      id: 7,
+    name: 'Ms Chinwenma Okorie',
+    role: 'HOD, Marketing',
+    image: '/assets/alyr5-oz1r6.avif',
+  },
+    {
+      id: 8,
+    name: 'Ms Chinwenma Okorie',
+    role: 'HOD, Marketing',
+    image: '/assets/alyr5-oz1r6.avif',
+  },
+    {
+      id: 9,
+    name: 'Ms Chinwenma Okorie',
+    role: 'HOD, Marketing',
+    image: '/assets/alyr5-oz1r6.avif',
+  },
+    {
+      id: 10,
     name: 'Ms Chinwenma Okorie',
     role: 'HOD, Marketing',
     image: '/assets/alyr5-oz1r6.avif',
