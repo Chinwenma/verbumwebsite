@@ -181,60 +181,67 @@ export type Courses = {
 export const coursesCard: Courses[] = [
   {
     id: 1,
-    title: "Patient Management",
+    title: "Basic Computer Training",
     description:
-      "Easily manage patient records, history, and visits from one dashboard.",
-    icon: "/assets/photo3.jpg",
-    details: `Our Patient Management module offers a centralized platform to access, update, and organize patient information in real-time. You can securely store medical histories, allergies, diagnoses, and more in a structured and intuitive interface. It reduces manual paperwork and enhances collaboration among departments by keeping patient data synchronized and accessible across the hospital system. Staff can efficiently track patient journeys and history to ensure continuity of care. The module supports unique patient IDs, search filters, and real-time updates, ensuring that the right information is always available to authorized personnel. It is compliant with data privacy regulations to ensure maximum security.`,
+      "Learn the fundamentals of computer usage, including operating systems, software applications, and internet skills.",
+    icon: "/assets/awr3a-3c47c.avif",
+    details: `Our Basic Computer Training course is ideal for beginners looking to build confidence with digital tools. You’ll learn how to operate a computer, use Microsoft Office applications (Word, Excel, PowerPoint), manage files and folders, and navigate the internet safely. This course lays a solid foundation for further learning and productivity in any digital environment.`,
   },
   {
     id: 2,
-    title: "Appointments & Scheduling",
+    title: "Graphic Design",
     description:
-      "Automate doctor appointments, notifications, and calendar management.",
-    icon: "/assets/ok.jpg",
-    details: `The Appointment Scheduling feature streamlines the process of booking and managing appointments for doctors, labs, and services. Patients can easily book slots via mobile or web, while hospital staff can view and manage schedules efficiently.Automatic reminders and notifications reduce no-shows and improve patient engagement. Doctors and nurses receive real-time updates on their daily calendar, making time management more effective.The system supports walk-ins, follow-ups, cancellations, and rescheduling, making it a flexible solution for both small clinics and large hospitals. Integration with electronic health records ensures all appointments are context-aware.`,
+      "Master the art of visual communication using industry-standard design software like Adobe Photoshop and corel.",
+    icon: "/assets/graphc.jpg",
+    details: `This course introduces students to the fundamentals of visual communication using industry-standard tools like Canva and CorelDRAW. Learn how to design logos, flyers, social media graphics, and more. Through hands-on projects, you’ll develop a strong sense of layout, typography, and color theory—essential for anyone looking to build a career in design or boost their brand identity.`,
   },
   {
     id: 3,
-    title: "Medical Records",
+    title: "Frontend Development",
     description:
-      "Maintain secure and accessible digital medical records and lab reports.",
-    icon: "/assets/img4.jpg",
-    details: `Digital medical records provide a secure and paperless way to store and retrieve patient health data. This module includes prescriptions, diagnoses, lab reports, radiology images, treatment plans, and other key documents. All records are encrypted and stored in the cloud, ensuring both safety and accessibility from any authorized device. Doctors can quickly access historical data during consultations for better decision-making.Role-based access ensures that only the right personnel view or edit sensitive information. The system supports version control and audit logs to maintain data integrity and accountability.`,
+      "Build interactive and responsive user interfaces using HTML, CSS, and JavaScript.",
+    icon: "/assets/frontend.jpg",
+    details: ` This course covers the essentials of frontend web development, teaching you how to create visually appealing and user-friendly websites. You’ll learn HTML for structure, CSS for styling, and JavaScript for interactivity. By the end of the course, you’ll be able to build responsive websites that work seamlessly across devices.`,
   },
   {
     id: 4,
-    title: "Billing & Invoicing",
+    title: "Backend Development",
     description:
-      "Handle payments, invoices, and receipts with ease and transparency.",
-    icon: "/assets/img6.jpg",
-    details: `The Billing & Invoicing module automates the financial side of hospital management, covering services, medications, consultations, and insurance claims. It generates accurate invoices and receipts instantly.It supports multiple payment gateways, split billing, and insurance processing, allowing for a seamless financial experience for both patients and hospital staff. All transactions are recorded and auditable.
-      You can set pricing rules based on patient categories (e.g., senior citizens, insured) and generate financial reports to track revenue and outstanding balances. This helps in improving cash flow and transparency.`,
+      "Power websites with server-side logic and database management.",
+    icon: "/assets/backend.jpg",
+    details: `This course dives into the world of backend development, where you’ll learn how to create server-side applications that power dynamic websites. You’ll explore Node.js, Express, and MongoDB to build RESTful APIs, manage databases, and handle user authentication. By the end of the course, you’ll have the skills to develop robust backend systems that support modern web applications.`,
   },
   {
     id: 5,
-    title: "Doctor & Staff Dashboard",
+    title: " Full Stack Web Development",
     description:
-      "Empower staff with role-based access, duties, and reporting tools.",
-    icon: "/assets/img7.jpg",
-    details: `This dashboard gives doctors, nurses, and administrative staff a personalized view of their responsibilities. Doctors can view their schedules, appointments, patients’ records, and write prescriptions from one dashboard.
-  
-  Administrative staff can manage patient admissions, discharges, inventory, and staff shifts. It simplifies internal communication and ensures everyone has the right tools for their role.
-  
-  With role-based access control, the dashboard ensures each staff member sees only what's relevant to them. Reports and analytics offer insight into performance, enabling better planning and accountability.`,
+      "Become a versatile developer by mastering both frontend and backend technologies.",
+    icon: "/assets/web1.avif",
+    details: `This comprehensive course combines both frontend and backend development skills. You’ll learn how to build complete web applications from scratch, integrating user interfaces with server-side logic. By mastering technologies like React, Node.js, and MongoDB, you’ll be equipped to tackle full-stack projects and meet the demands of today’s job market.`,
   },
   {
     id: 6,
-    title: "Hospital Analytics",
+    title: "UI/UX Design",
     description:
-      "View insightful analytics and reports to improve hospital efficiency.",
+      "Create intuitive and engaging user experiences through design thinking.",
     icon: "/assets/img8.jpeg",
-    details: `The Hospital Analytics module turns raw data into actionable insights. From patient inflow trends to revenue tracking, it provides real-time dashboards to help administrators make data-driven decisions.
-  
-  You can monitor key performance indicators (KPIs) such as average wait times, patient satisfaction, and treatment success rates. The visual reports help identify bottlenecks and optimize operations.
-  
-  This module supports exporting reports to PDF/Excel and integrates with third-party BI tools. It's ideal for board meetings, audits, and long-term planning. Ultimately, it helps the hospital run smarter, not harder.`,
+    details: `This course focuses on the principles of user interface (UI) and user experience (UX) design. You’ll learn how to conduct user research, create wireframes, and develop prototypes that enhance usability and engagement. By applying design thinking methodologies, you’ll be able to craft digital products that not only look great but also provide seamless user experiences.`,
+  },
+  {
+    id: 7,
+    title: "Computer Networking",
+    description:
+      "Understand the fundamentals of computer networks, protocols, and security.",
+    icon: "/assets/img9.jpg",
+    details: `This course provides a solid foundation in computer networking concepts. You’ll learn about network architectures, protocols, and security measures essential for building and maintaining reliable networks. Topics include TCP/IP, LAN/WAN technologies, network troubleshooting, and best practices for securing network infrastructures.`,
+  },
+  {
+    id: 8,
+    title: "Cybersecurity",
+    description:
+      "Protect systems and data from cyber threats with essential security practices.",
+    icon: "/assets/img10.jpg",
+    details: `This course covers the fundamentals of cybersecurity, teaching you how to safeguard digital assets against threats. You’ll learn about common vulnerabilities, risk assessment, encryption techniques, and incident response strategies. By the end of the course, you’ll be equipped with the knowledge to implement effective security measures in any organization.`,
   },
 ];
 
@@ -258,7 +265,7 @@ export const team: TeamMember[] = [
   {
     id: 2,
     name: 'Engr. Paulinus O. Ezeh',
-    role: 'Admin Manager & HOD, Networking',
+    role: 'Admin Manager | HOD, Networking',
     image: '/assets/avqkr-kv2ew.avif',
   },
    {
@@ -273,18 +280,18 @@ export const team: TeamMember[] = [
     id: 4,
     name: 'Engr. Uchenna Marcel Obiefuna',
     role: 'HOD, Web Development',
-    image: '/assets/alyr5-oz1r6.avif',
+    image: '/assets/uche.jpg',
   },
    {
     id: 5,
     name: 'Ms Chinwenma Okorie',
-    role: 'HOD, Marketing',
+    role: 'Web Developer | Program Coordinator',
     image: '/assets/chinwenma.jpg',
   },
     {
       id: 6,
-    name: 'Ms Chinwenma Okorie',
-    role: 'HOD, Marketing',
+    name: 'Eze Perculia Chigaemezu',
+    role: 'Tutor | Graphics Designer',
     image: '/assets/alyr5-oz1r6.avif',
   },
     {
