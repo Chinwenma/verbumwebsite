@@ -7,25 +7,25 @@ const services = [
   {
     title: "Digital Services",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+      "Our digital services cover everything from eye-catching web design and secure web hosting to custom web software development. We build fast, functional, and scalable solutions tailored to your business needs",
     icon: <Code2 size={24} />,
   },
   {
     title: "Installation Services",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+      "We offer expert installation services including computer networking, CCTV systems, and solar solutions—delivering reliable and efficient tech infrastructure for your home or business.",
     icon: <AppWindow size={24} />,
   },
   {
     title: "Internet Services",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+      "We provide reliable and high-speed internet solutions for homes, schools, and businesses—ensuring seamless connectivity and round-the-clock support.",
     icon: <Atom size={24} />,
   },
   {
     title: "ICT Education Services",
     description:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit.",
+      "We provide ICT training from basic to advanced levels, covering computer fundamentals, graphic design, web development, digital marketing, cybersecurity, and more—empowering learners with in-demand tech skills.",
     icon: <ShieldCheck size={24} />,
   },
 ];

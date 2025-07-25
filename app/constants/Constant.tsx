@@ -258,7 +258,7 @@ export const team: TeamMember[] = [
   {
     id: 2,
     name: 'Engr. Paulinus O. Ezeh',
-    role: 'Admin Manager',
+    role: 'Admin Manager & HOD, Networking',
     image: '/assets/avqkr-kv2ew.avif',
   },
    {
@@ -267,20 +267,22 @@ export const team: TeamMember[] = [
     role: 'Accountant',
     image: '/assets/alyr5-oz1r6.avif',
   },
+  
+
   {
     id: 4,
-    name: 'Engr. Paulinus O. Ezeh',
-    role: 'HOD, Networking',
-    image: '/assets/avqkr-kv2ew.avif',
-  },
-  {
-    id: 5,
     name: 'Engr. Uchenna Marcel Obiefuna',
     role: 'HOD, Web Development',
     image: '/assets/alyr5-oz1r6.avif',
   },
    {
-    id: 6,
+    id: 5,
+    name: 'Ms Chinwenma Okorie',
+    role: 'HOD, Marketing',
+    image: '/assets/chinwenma.jpg',
+  },
+    {
+      id: 6,
     name: 'Ms Chinwenma Okorie',
     role: 'HOD, Marketing',
     image: '/assets/alyr5-oz1r6.avif',
@@ -293,21 +295,15 @@ export const team: TeamMember[] = [
   },
     {
       id: 8,
-    name: 'Ms Chinwenma Okorie',
-    role: 'HOD, Marketing',
+    name: 'Kingsley Ejiofor',
+    role: 'Cafe Attendant',
     image: '/assets/alyr5-oz1r6.avif',
   },
     {
       id: 9,
-    name: 'Ms Chinwenma Okorie',
-    role: 'HOD, Marketing',
-    image: '/assets/alyr5-oz1r6.avif',
-  },
-    {
-      id: 10,
-    name: 'Ms Chinwenma Okorie',
-    role: 'HOD, Marketing',
-    image: '/assets/alyr5-oz1r6.avif',
+    name: 'Kosisochukwu Nwankwo',
+    role: 'Web Developer',
+    image: '/assets/kaosi.jpg',
   },
   
 ];
