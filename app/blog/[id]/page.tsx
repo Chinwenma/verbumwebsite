@@ -1,8 +1,21 @@
+'use client';
 
-const page = () => {
-  return (
-    <div>page</div>
-  )
+import { use } from 'react';
+import { blogs } from '@/lib/blog';
+import BlogDetails from '../BlogDetails';
+import { notFound } from 'next/navigation';
+
+export default function BlogPage({
+  params,
+}: {
+  params: Promise<{ id: string }>;
+}) {
+  const { id } = use(params); // ✅ unwrap promise
+
+  // If your blog IDs are numbers, convert
+  const blog = blogs.find((b) => b.id === Number(id));
+
+  if (!blog) return notFound();
+
+  return <BlogDetails blog={blog} />;
 }
-
-export default page

@@ -41,10 +41,10 @@ const containerVariants = {
   },
 };
 
-const cardVariants = {
-  hidden: { opacity: 0, y: 30 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
-};
+// const cardVariants = {
+//   hidden: { opacity: 0, y: 30 },
+//   show: { opacity: 1, y: 0, transition: { duration: 0.5, ease: 'easeOut' } },
+// };
 
 export default function AboutPage () {
   return (
@@ -102,7 +102,7 @@ export default function AboutPage () {
             <motion.div
               key={index}
               className="w-full sm:w-[45%] lg:w-[30%] bg-white p-6 rounded shadow text-center"
-              variants={cardVariants}
+              // variants={cardVariants}
             >
               <h4 className="text-lg font-semibold mb-2 text-black">
                 {value.title}

@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import Link from "next/link";
 import { FC } from "react";
-import { services } from "@/app/constants/Constant";
+import { servicess } from "@/app/constants/Constant";
 import PageBanner from "../components/pagebanner/PageBanner";
 const ServicesPage: FC = () => {
   return (
@@ -27,17 +27,18 @@ const ServicesPage: FC = () => {
           viewport={{ once: true }}
         >
           <span className="text-3xl md:text-4xl font-semibold text-[#8f0000] font-serif drop-shadow-lg">
-            Featured Services
+            All Services
           </span>
           <span className="w-full max-w-lg h-[5px] bg-[#d7e6ef] rounded-md relative hidden md:block">
             <span className="absolute left-0 top-0 h-full w-[30%] bg-[#5484ab] rounded-r-md"></span>
           </span>
+       
         </motion.div>
       </div>
 
       {/* Service Cards */}
       <div className="flex flex-wrap justify-center items-center gap-6">
-        {services.map((service, index) => (
+        {servicess.map((service, index) => (
           <div
             key={service.title}
             className="bg-gray-100 w-full sm:w-[85%] md:w-[45%] lg:w-[30%] min-h-[350px] p-6 rounded-lg shadow hover:bg-gradient-to-br hover:from-[#020024] hover:to-[#244860] transition-all flex flex-col items-center text-center hover:cursor-pointer hover:text-white"
@@ -63,7 +64,7 @@ const ServicesPage: FC = () => {
                 {service.desc}
               </p>
               <Link
-                href={service.link}
+                href={`/services/${service.id}`}
                 className="text-[#ff0000] hover:text-gray-300 transition"
               >
                 Learn More

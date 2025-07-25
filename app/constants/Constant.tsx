@@ -1,4 +1,3 @@
-// types/nav.ts
 export interface NavLink {
   id: number;
   label: string;
@@ -121,48 +120,55 @@ export const slides: Slide[] = [
 ];
 
 interface ServiceItem {
+  id: number; 
   image: string;
   title: string;
   desc: string;
-  link: string;
+  body: string; 
 }
 
-export const services: ServiceItem[] = [
+export const servicess: ServiceItem[] = [
   {
+    id: 1,
     image: "/assets/atpn9-27cm1.avif",
     title: "Website and app development",
     desc: "We develop matchless website solutions to increase the efficiency and competitive advantage of companies, institutions and organizations b...",
-    link: "webdev.html",
+    body: "We develop matchless website solutions to increase the efficiency and competitive advantage of companies, institutions and organizations by providing them with a strong online presence. Our services include custom website design, e-commerce solutions, content management systems, and web application development.",
   },
   {
+    id: 2,
     image: "/assets/a1muo-upgac.avif",
     title: "Networking & Internet",
     desc: "Our VSAT internet is an Internet connection via satellite, which means it can be used anywhere in Nigeria, in remote locations...",
-    link: "networking.html",
+    body: "Our VSAT internet is an Internet connection via satellite, which means it can be used anywhere in Nigeria, in remote locations where other forms of internet connection are not available. We also provide networking solutions including LAN/WAN setup, network security, and maintenance services.", 
   },
   {
+    id: 3,
     image: "/assets/aq31q-9poim.webp",
     title: "Solar installation",
     desc: "In an era where sustainable energy solutions are imperative, Verbum Networks Limited is at the forefront, offering state...",
-    link: "solar.html",
+    body: "In an era where sustainable energy solutions are imperative, Verbum Networks Limited is at the forefront, offering state-of-the-art solar installation services. Our team of experts specializes in designing and implementing solar power systems tailored to meet the unique energy needs of homes, businesses, and institutions.",
   },
   {
+    id: 4,
     image: "/assets/asizu-n23px.avif",
     title: "CCTV installation",
     desc: "We offer complete computer-based CCTV/DVR, IP and WiFi surveillance systems with affordable rates. We also deploy PABX telep...",
-    link: "cctv.html",
+    body: "We offer complete computer-based CCTV/DVR, IP and WiFi surveillance systems with affordable rates. We also deploy PABX telephone systems, ensuring comprehensive security and communication solutions for our clients.",
   },
   {
+      id: 5,
     image: "/assets/a0qrj-majls.avif",
     title: "Graphics design",
     desc: "We design all ranges of graphic publications - for digital media, print, broadcast, etc., and we deliver high quality products.",
-    link: "graphics.html",
+    body: "We design all ranges of graphic publications - for digital media, print, broadcast, etc., and we deliver high quality products. Our services include logo design, branding, marketing materials, and digital graphics that effectively communicate your message and enhance your brand identity.",
   },
   {
+id: 6,
     image: "/assets/a65qf-w8ee7.avif",
     title: "ICT education",
     desc: "Through its Technical Education Unit (CICOT), Verbum Networks offers various ICT Research and Training programs.",
-    link: "academy.html",
+    body: "Through its Technical Education Unit (CICOT), Verbum Networks offers various ICT Research and Training programs. We provide hands-on training in web development, networking, cybersecurity, and more, empowering individuals with the skills needed to thrive in the digital age.",
   },
 ];
 
@@ -237,42 +243,4 @@ export const team: TeamMember[] = [
     image: '/assets/alyr5-oz1r6.avif',
   },
   
-];
-interface BlogPost {
-  id: string;
-  title: string;
-  excerpt: string;
-  image: string;
-  slug: string;
-}
-
- export const blogs: BlogPost[] = [
-  {
-    id: '1',
-    title: 'How to Build Scalable Web Apps with Next.js',
-    excerpt: 'Discover modern strategies to scale your app architecture using the latest features in Next.js 15.',
-    image: '/assets/hero24.jpg',
-    slug: '/blog/nextjs-scalability',
-  },
-  {
-    id: '2',
-    title: 'Design Tips for Developer Portfolios',
-    excerpt: 'First impressions matter. Here are practical tips to make your portfolio stand out visually and technically.',
-    image: '/assets/hero25.jpg',
-    slug: '/blog/portfolio-design',
-  },
-  {
-    id: '3',
-    title: 'Integrating AI Tools in Your Workflow',
-    excerpt: 'Explore how AI-powered tools can improve productivity in frontend and backend development.',
-    image: '/assets/hero26.jpg',
-    slug: '/blog/ai-in-dev',
-  },
-  {
-    id: '4',
-    title: 'Mastering Tailwind CSS Responsiveness',
-    excerpt: 'Make your UI shine across devices with these powerful Tailwind CSS techniques.',
-    image: '/assets/hero27.jpg',
-    slug: '/blog/tailwind-responsive',
-  },
 ];
