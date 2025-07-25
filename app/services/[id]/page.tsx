@@ -2,6 +2,8 @@
 import PageBanner from "@/app/components/pagebanner/PageBanner";
 import { servicess } from "@/app/constants/Constant";
 import Image from "next/image";
+import Link from "next/link";
+
 export default async function ServicePage({
   params,
 }: {
@@ -25,6 +27,12 @@ export default async function ServicePage({
       {/* Content Section */}
       <section className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-gray-800 text-base sm:text-lg leading-relaxed break-words">
+           <Link
+        href="/services"
+        className="text-blue-600 hover:underline mb-4 inline-block"
+      >
+        ← Back to Blogs
+      </Link>
           <div className="w-full mx-auto mb-6">
             {" "}
             <Image
