@@ -65,7 +65,7 @@ export default function AboutPage () {
         </div>
         <div>
           <h2 className="text-2xl font-bold mb-4 bg-gradient-to-b from-black to-red-500 text-transparent bg-clip-text">Who We Are</h2>
-          <p className="text-gray-600 text-justify">
+          <p className="text-gray-600 text-justify leading-relaxed tracking-wider">
             Our goal is to bridge the digital skills gap by offering hands-on, practical training in areas such as graphic design, web development, computer literacy, UI/UX design, video editing, cybersecurity, and digital marketing. Whether you`re a beginner or looking to upskill, our program provides the tools and mentorship you need to thrive in the digital economy. At Verbum, we believe technology is a powerful tool for personal and economic growth, and we are committed to empowering communities through knowledge, skills, and innovation. Join us and take the first step towards a tech-driven future!
           </p>
       
@@ -75,14 +75,14 @@ export default function AboutPage () {
         <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-b from-black to-orange-500 text-transparent bg-clip-text">
           OUR MISSION
         </h2>
-        <p className="text-gray-600 max-w-3xl mx-auto text-justify">
+        <p className="text-gray-600 max-w-3xl mx-auto text-justify leading-relaxed tracking-wider">
           At Verbum Networks, our mission is to empower individuals—especially youths and underserved communities—with free and affordable ICT training and digital skills that unlock opportunities for employment, entrepreneurship, and lifelong growth in the digital age. We are committed to building a tech-savvy society through inclusive, practical, and life-changing education.
         </p>
 
         <h2 className="text-2xl md:text-3xl font-bold mb-4 bg-gradient-to-b from-black to-orange-500 text-transparent bg-clip-text mt-10">
           OUR VISION
         </h2>
-        <p className="text-gray-600 max-w-3xl mx-auto text-justify">
+        <p className="text-gray-600 max-w-3xl mx-auto text-justify leading-relaxed tracking-wider">
           Our vision is to become a leading force in tech empowerment across Africa, known for transforming lives through access to digital skills, fostering innovation, and bridging the digital divide. We envision a future where every willing learner, regardless of background, has the opportunity to thrive in the tech-driven world.
         </p>
       </section>
@@ -107,7 +107,7 @@ export default function AboutPage () {
               <h4 className="text-lg font-semibold mb-2 text-black">
                 {value.title}
               </h4>
-              <p className="text-gray-600">{value.desc}</p>
+              <p className="text-gray-600 leading-relaxed tracking-wider text-justify">{value.desc}</p>
             </motion.div>
           ))}
         </motion.div>
@@ -136,7 +136,7 @@ export default function AboutPage () {
                       src={member.image}
                       alt={member.name}
                       fill
-                      className="rounded-full object-cover border-2 border-red-700"
+                      className="rounded-full object-cover object-top border-2 border-red-700"
                     />
                   </div>
                   <h3 className="text-lg font-medium text-gray-800">{member.name}</h3>

@@ -97,7 +97,7 @@ export const slides: Slide[] = [
     subtitle:
       "Manage patients, staff, appointments, billing, inventory, and reports—all in one seamless, automated hospital management system.",
     buttonText: "View Features",
-    url: "/services", // Optional URL for the button
+    url: "https://verbumhealth.com/",
   },
   {
     id: 5,
@@ -258,9 +258,9 @@ interface TeamMember {
 export const team: TeamMember[] = [
   {
     id: 1,
-    name: 'Rev. Chukwu Paul Emmanuel, OP',
+    name: 'Rev. Chukwu Paul OP',
     role: 'Director',
-    image: '/assets/ahsbf-k01y6.avif',
+    image: '/assets/Director.png',
   },
   {
     id: 2,
@@ -272,7 +272,7 @@ export const team: TeamMember[] = [
     id: 3,
     name: 'Ms Immaculata Uzendu',
     role: 'Accountant',
-    image: '/assets/alyr5-oz1r6.avif',
+    image: '/assets/Immaculata.png',
   },
   
 
@@ -290,27 +290,24 @@ export const team: TeamMember[] = [
   },
     {
       id: 6,
-    name: 'Eze Perculia Chigaemezu',
+    name: 'Eze Peculiar Chigaemezu',
     role: 'Tutor | Graphics Designer',
-    image: '/assets/alyr5-oz1r6.avif',
+    image: '/assets/Peculiar.png',
   },
-    {
+   {
       id: 7,
-    name: 'Ms Chinwenma Okorie',
-    role: 'HOD, Marketing',
-    image: '/assets/alyr5-oz1r6.avif',
+    name: 'Kosisochukwu Nwankwo',
+    role: 'Web Developer',
+    image: '/assets/Kosi.png',
   },
+ 
     {
       id: 8,
     name: 'Kingsley Ejiofor',
     role: 'Cafe Attendant',
-    image: '/assets/alyr5-oz1r6.avif',
+    image: '/assets/Kingsely.png',
   },
-    {
-      id: 9,
-    name: 'Kosisochukwu Nwankwo',
-    role: 'Web Developer',
-    image: '/assets/kaosi.jpg',
-  },
+   
+  
   
 ];
