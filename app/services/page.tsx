@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Image from "next/image";
-import Link from "next/link";
+// import Link from "next/link";
 import { FC } from "react";
 import { servicess } from "@/app/constants/Constant";
 import PageBanner from "../components/pagebanner/PageBanner";

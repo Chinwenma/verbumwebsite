@@ -5,40 +5,40 @@ import { motion } from "framer-motion";
 import { team } from "@/app/constants/Constant";
 // import { TeamCard } from "@/app/components/TeamCard";
 
-const values = [
-  {
-    title: "Innovation",
-    desc: "We embrace creativity and forward-thinking, continuously seeking new ways to improve, evolve, and add value. We foster an environment where bold ideas are encouraged, experimentation is welcomed, and learning from failure is seen as a stepping stone to success.",
-  },
-  {
-    title: "Integrity",
-    desc: "At Verbum Tech Empowerment Internship, we believe in doing the right thing—always. We instill a strong sense of honesty and ethical conduct in our interns, ensuring they grow into trustworthy professionals.",
-  },
-  {
-    title: "Expertise and Professionalism",
-    desc: "Our internship program is designed to develop industry-relevant skills and professional conduct. Interns are trained to approach every task with confidence, competence, and a commitment to excellence.",
-  },
-  {
-    title: "Flexibility",
-    desc: "We equip interns to be adaptable in today’s fast-changing tech world. Whether learning new tools or working in dynamic teams, flexibility is a skill we nurture intentionally.",
-  },
-  {
-    title: "Impact",
-    desc: "We drive meaningful change in communities by using our skills, resources, and innovations to make a lasting difference. Our work is guided by a deep sense of purpose, and we strive to create solutions that uplift, empower, and inspire.",
-  },
-  {
-    title: "Innovation",
-    desc: "Our program encourages creativity and bold thinking. Interns are challenged to come up with fresh ideas, experiment with solutions, and explore new ways of solving problems using technology.",
-  },
-];
-const containerVariants = {
-  hidden: {},
-  show: {
-    transition: {
-      staggerChildren: 0.2,
-    },
-  },
-};
+// const values = [
+//   {
+//     title: "Innovation",
+//     desc: "We embrace creativity and forward-thinking, continuously seeking new ways to improve, evolve, and add value. We foster an environment where bold ideas are encouraged, experimentation is welcomed, and learning from failure is seen as a stepping stone to success.",
+//   },
+//   {
+//     title: "Integrity",
+//     desc: "At Verbum Tech Empowerment Internship, we believe in doing the right thing—always. We instill a strong sense of honesty and ethical conduct in our interns, ensuring they grow into trustworthy professionals.",
+//   },
+//   {
+//     title: "Expertise and Professionalism",
+//     desc: "Our internship program is designed to develop industry-relevant skills and professional conduct. Interns are trained to approach every task with confidence, competence, and a commitment to excellence.",
+//   },
+//   {
+//     title: "Flexibility",
+//     desc: "We equip interns to be adaptable in today’s fast-changing tech world. Whether learning new tools or working in dynamic teams, flexibility is a skill we nurture intentionally.",
+//   },
+//   {
+//     title: "Impact",
+//     desc: "We drive meaningful change in communities by using our skills, resources, and innovations to make a lasting difference. Our work is guided by a deep sense of purpose, and we strive to create solutions that uplift, empower, and inspire.",
+//   },
+//   {
+//     title: "Innovation",
+//     desc: "Our program encourages creativity and bold thinking. Interns are challenged to come up with fresh ideas, experiment with solutions, and explore new ways of solving problems using technology.",
+//   },
+// ];
+// const containerVariants = {
+//   hidden: {},
+//   show: {
+//     transition: {
+//       staggerChildren: 0.2,
+//     },
+//   },
+// };
 
 // const cardVariants = {
 //   hidden: { opacity: 0, y: 30 },
