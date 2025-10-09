@@ -54,7 +54,7 @@ export const testimonials: Testimony[] = [
 ];
 
 export interface Slide {
-  id: number; 
+  id: number;
   image: string;
   title: string;
   subtitle: string;
@@ -79,7 +79,7 @@ export const slides: Slide[] = [
     subtitle:
       " Gain backend skills using Node.js, Express, MongoDB, and APIs to power dynamic, data-driven apps.",
     buttonText: "Enroll Now",
-    url:"/services", // Optional URL for the button
+    url: "/services", // Optional URL for the button
   },
   {
     id: 3,
@@ -120,11 +120,11 @@ export const slides: Slide[] = [
 ];
 
 interface ServiceItem {
-  id: number; 
+  id: number;
   image: string;
   title: string;
   desc: string;
-  body: string; 
+  body: string;
 }
 
 export const servicess: ServiceItem[] = [
@@ -140,7 +140,7 @@ export const servicess: ServiceItem[] = [
     image: "/assets/a1muo-upgac.avif",
     title: "Networking & Internet",
     desc: "Our VSAT internet is an Internet connection via satellite, which means it can be used anywhere in Nigeria, in remote locations...",
-    body: "Our VSAT internet is an Internet connection via satellite, which means it can be used anywhere in Nigeria, in remote locations where other forms of internet connection are not available. We also provide networking solutions including LAN/WAN setup, network security, and maintenance services.", 
+    body: "Our VSAT internet is an Internet connection via satellite, which means it can be used anywhere in Nigeria, in remote locations where other forms of internet connection are not available. We also provide networking solutions including LAN/WAN setup, network security, and maintenance services.",
   },
   {
     id: 3,
@@ -157,14 +157,14 @@ export const servicess: ServiceItem[] = [
     body: "We offer complete computer-based CCTV/DVR, IP and WiFi surveillance systems with affordable rates. We also deploy PABX telephone systems, ensuring comprehensive security and communication solutions for our clients.",
   },
   {
-      id: 5,
+    id: 5,
     image: "/assets/a0qrj-majls.avif",
     title: "Graphics design",
     desc: "We design all ranges of graphic publications - for digital media, print, broadcast, etc., and we deliver high quality products.",
     body: "We design all ranges of graphic publications - for digital media, print, broadcast, etc., and we deliver high quality products. Our services include logo design, branding, marketing materials, and digital graphics that effectively communicate your message and enhance your brand identity.",
   },
   {
-id: 6,
+    id: 6,
     image: "/assets/a65qf-w8ee7.avif",
     title: "ICT education",
     desc: "Through its Technical Education Unit (CICOT), Verbum Networks offers various ICT Research and Training programs.",
@@ -185,15 +185,17 @@ export const coursesCard: Courses[] = [
     description:
       "Learn the fundamentals of computer usage, including operating systems, software applications, and internet skills.",
     icon: "/assets/awr3a-3c47c.avif",
-    details: `Our Basic Computer Training course is ideal for beginners looking to build confidence with digital tools. You’ll learn how to operate a computer, use Microsoft Office applications (Word, Excel, PowerPoint), manage files and folders, and navigate the internet safely. This course lays a solid foundation for further learning and productivity in any digital environment.`,
+    details: `Duration: 6 weeks  
+This beginner-friendly course introduces you to the core concepts of computer usage. You’ll learn how to operate a computer confidently, understand operating systems, and manage files and folders. The course also covers essential software such as Microsoft Word, Excel, and PowerPoint, teaching you how to create documents, spreadsheets, and presentations. Additionally, you’ll explore safe internet browsing, email communication, and basic troubleshooting techniques. By the end of this 6-week program, you’ll be able to handle everyday digital tasks efficiently and prepare yourself for advanced computer studies or office work.`,
   },
   {
     id: 2,
     title: "Graphic Design",
     description:
-      "Master the art of visual communication using industry-standard design software like Adobe Photoshop and corel.",
+      "Master the art of visual communication using industry-standard design software like Adobe Photoshop and CorelDRAW.",
     icon: "/assets/graphc.jpg",
-    details: `This course introduces students to the fundamentals of visual communication using industry-standard tools like Canva and CorelDRAW. Learn how to design logos, flyers, social media graphics, and more. Through hands-on projects, you’ll develop a strong sense of layout, typography, and color theory—essential for anyone looking to build a career in design or boost their brand identity.`,
+    details: `Duration: 6 weeks  
+This hands-on course takes you into the world of visual communication and creativity. You’ll learn how to use top design tools like Canva, CorelDRAW, and Adobe Photoshop to produce professional-quality graphics. Topics include color theory, typography, layout design, branding, and image manipulation. You’ll also learn how to design logos, flyers, posters, and social media graphics. Each week features creative projects that help you build a professional design portfolio. By the end of this 6-week program, you’ll have the confidence and skills to take on real-world design jobs or launch your freelance career.`,
   },
   {
     id: 3,
@@ -201,7 +203,8 @@ export const coursesCard: Courses[] = [
     description:
       "Build interactive and responsive user interfaces using HTML, CSS, and JavaScript.",
     icon: "/assets/frontend.jpg",
-    details: ` This course covers the essentials of frontend web development, teaching you how to create visually appealing and user-friendly websites. You’ll learn HTML for structure, CSS for styling, and JavaScript for interactivity. By the end of the course, you’ll be able to build responsive websites that work seamlessly across devices.`,
+    details: `Duration: 3 months  
+This course introduces you to the building blocks of modern web design and development. You’ll start with HTML for structuring web content, CSS for styling, and JavaScript for interactivity. Through practical exercises, you’ll learn to build responsive layouts using CSS Flexbox and Grid, apply animations, and enhance user experiences. You’ll also explore modern tools like Git/GitHub for version control and frameworks such as React for building dynamic web applications. By the end of 3 months, you’ll be able to design and develop fully responsive websites that look great on all devices.`,
   },
   {
     id: 4,
@@ -209,44 +212,38 @@ export const coursesCard: Courses[] = [
     description:
       "Power websites with server-side logic and database management.",
     icon: "/assets/backend.jpg",
-    details: `This course dives into the world of backend development, where you’ll learn how to create server-side applications that power dynamic websites. You’ll explore Node.js, Express, and MongoDB to build RESTful APIs, manage databases, and handle user authentication. By the end of the course, you’ll have the skills to develop robust backend systems that support modern web applications.`,
+    details: `Duration: 3 months  
+This course focuses on the server side of web applications — where data is stored, processed, and managed. You’ll learn how to build scalable backend systems using Node.js, Express.js, and MongoDB. The course covers database design, authentication, API development, and deployment techniques. You’ll also work on projects that teach you how to integrate frontend applications with backend services and manage user data securely. By the end of this 3-month course, you’ll be able to build powerful backend infrastructures that support real-world web and mobile applications.`,
   },
   {
     id: 5,
-    title: " Full Stack Web Development",
+    title: "Full Stack Web Development",
     description:
       "Become a versatile developer by mastering both frontend and backend technologies.",
     icon: "/assets/web1.avif",
-    details: `This comprehensive course combines both frontend and backend development skills. You’ll learn how to build complete web applications from scratch, integrating user interfaces with server-side logic. By mastering technologies like React, Node.js, and MongoDB, you’ll be equipped to tackle full-stack projects and meet the demands of today’s job market.`,
+    details: `Duration: 6 months  
+This comprehensive program combines both frontend and backend development into one complete learning experience. You’ll begin by mastering HTML, CSS, and JavaScript before moving on to React for building dynamic user interfaces. Then, you’ll learn backend technologies such as Node.js, Express, and MongoDB to handle server-side logic and data management. You’ll also explore version control with Git, API integration, and deployment strategies. Over the course of 6 months, you’ll build multiple full-stack projects that demonstrate your ability to develop, connect, and deploy complete web applications from scratch.`,
   },
   {
     id: 6,
     title: "UI/UX Design",
     description:
       "Create intuitive and engaging user experiences through design thinking.",
-    icon: "/assets/img8.jpeg",
-    details: `This course focuses on the principles of user interface (UI) and user experience (UX) design. You’ll learn how to conduct user research, create wireframes, and develop prototypes that enhance usability and engagement. By applying design thinking methodologies, you’ll be able to craft digital products that not only look great but also provide seamless user experiences.`,
+    icon: "/assets/hero-ui.jpg",
+    details: `Duration: 3 months  
+This course introduces the core principles of user interface (UI) and user experience (UX) design. You’ll learn to conduct user research, define personas, create wireframes, and build prototypes using tools such as Figma and Adobe XD. You’ll also gain insights into usability testing, accessibility design, and the psychology behind user interactions. Each module includes practical exercises that guide you through real-world design challenges. By the end of this 3-month course, you’ll be able to design digital products that are not only visually appealing but also user-centered and highly functional.`,
   },
   {
     id: 7,
     title: "Computer Networking",
     description:
       "Understand the fundamentals of computer networks, protocols, and security.",
-    icon: "/assets/img9.jpg",
-    details: `This course provides a solid foundation in computer networking concepts. You’ll learn about network architectures, protocols, and security measures essential for building and maintaining reliable networks. Topics include TCP/IP, LAN/WAN technologies, network troubleshooting, and best practices for securing network infrastructures.`,
+    icon: "/assets/networking.jpg",
+    details: `Duration: 3 months  
+This course provides a thorough understanding of how computer networks operate. You’ll learn about network devices, cabling, IP addressing, and configurations. The program covers both local area networks (LAN) and wide area networks (WAN), including protocols like TCP/IP. You’ll also explore network troubleshooting, firewall configuration, and wireless networking. Hands-on labs and simulations help you practice real networking setups. By the end of the program, you’ll be equipped with the skills needed to build, maintain, and secure computer networks for personal or business use.`,
   },
-  {
-    id: 8,
-    title: "Cybersecurity",
-    description:
-      "Protect systems and data from cyber threats with essential security practices.",
-    icon: "/assets/img10.jpg",
-    details: `This course covers the fundamentals of cybersecurity, teaching you how to safeguard digital assets against threats. You’ll learn about common vulnerabilities, risk assessment, encryption techniques, and incident response strategies. By the end of the course, you’ll be equipped with the knowledge to implement effective security measures in any organization.`,
-  },
+ 
 ];
-
-
-
 
 interface TeamMember {
   id: number; // Optional for flexibility
@@ -258,56 +255,52 @@ interface TeamMember {
 export const team: TeamMember[] = [
   {
     id: 1,
-    name: 'Rev. Chukwu Paul OP',
-    role: 'Director',
-    image: '/assets/Director.png',
+    name: "Rev. Chukwu Paul OP",
+    role: "Director",
+    image: "/assets/Director.png",
   },
   {
     id: 2,
-    name: 'Engr. Paulinus O. Ezeh',
-    role: 'Admin Manager | HOD, Networking',
-    image: '/assets/avqkr-kv2ew.avif',
+    name: "Engr. Paulinus O. Ezeh",
+    role: "Admin Manager | HOD, Networking",
+    image: "/assets/avqkr-kv2ew.avif",
   },
-   {
+  {
     id: 3,
-    name: 'Ms Immaculata Uzendu',
-    role: 'Accountant',
-    image: '/assets/Immaculata.png',
+    name: "Ms Immaculata Uzendu",
+    role: "Accountant",
+    image: "/assets/Immaculata.png",
   },
-  
 
   {
     id: 4,
-    name: 'Engr. Uchenna Marcel Obiefuna',
-    role: 'HOD, Web Development',
-    image: '/assets/uche.jpg',
+    name: "Engr. Uchenna Marcel Obiefuna",
+    role: "HOD, Web Development",
+    image: "/assets/uche.jpg",
   },
-   {
+  {
     id: 5,
-    name: 'Ms Chinwenma Okorie',
-    role: 'Web Developer | Program Coordinator',
-    image: '/assets/chinwenma.jpg',
+    name: "Engr. Chinwenma Okorie",
+    role: "Web Developer | Program Coordinator",
+    image: "/assets/chinwenma.jpg",
   },
-    {
-      id: 6,
-    name: 'Eze Peculiar Chigaemezu',
-    role: 'Tutor | Graphics Designer',
-    image: '/assets/Peculiar.png',
+  {
+    id: 6,
+    name: "Eze Peculiar Chigaemezu",
+    role: "Tutor | Graphics Designer",
+    image: "/assets/Peculiar.png",
   },
-   {
-      id: 7,
-    name: 'Kosisochukwu Nwankwo',
-    role: 'Web Developer',
-    image: '/assets/Kosi.png',
+  {
+    id: 7,
+    name: "Kosisochukwu Nwankwo",
+    role: "Web Developer",
+    image: "/assets/Kosi.png",
   },
- 
-    {
-      id: 8,
-    name: 'Kingsley Ejiofor',
-    role: 'Cafe Attendant',
-    image: '/assets/Kingsely.png',
+
+  {
+    id: 8,
+    name: "Kingsley Ejiofor",
+    role: "Cafe Attendant",
+    image: "/assets/Kingsely.png",
   },
-   
-  
-  
 ];

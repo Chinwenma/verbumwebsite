@@ -27,19 +27,20 @@ const CoursesPage: React.FC = () => {
   return (
     <section id="features" className="py-10 bg-gray-100">
       <PageBanner
-       title="Courses"
-        subtitle="Explore Our Hands-On ICT Training Programs"
+       title="          Our Courses – Learn, Build, Excel
+"
+        subtitle="At Verbum Networks Limited, we offer a variety of hands-on ICT training programs designed to help you master in-demand tech skills"
         backgroundImage="/assets/a1fiy-v6plo.avif"
       />
       <div className="container mx-auto px-4">
-        <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center mt-6 font-bold tracking-wide mb-8 bg">
+        {/* <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center mt-6 font-bold tracking-wide mb-8 bg">
           Our Courses – Learn, Build, Excel
 
 
         </h2>
         <p className="text-color text-center mb-12 max-w-3xl mx-auto">
          At Verbum Networks Limited, we offer a variety of hands-on ICT training programs designed to help you master in-demand tech skills
-        </p>
+        </p> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           { coursesCard.map((course, index) => (
@@ -71,7 +72,7 @@ const CoursesPage: React.FC = () => {
                 {course.description}
               </p>
 
-              <p className="bg-gradient-to-b from-black to-red-500 text-transparent bg-clip-text text-2xl font-bold text-center mt-2">
+              <p className="bg-gradient-to-b from-black to-red-500 text-transparent bg-clip-text text-2xl text-center mt-2">
                 Click to learn more
               </p>
             </motion.div>

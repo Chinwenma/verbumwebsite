@@ -1,4 +1,4 @@
-import NewsletterCTA from "./components/footer/NewsletterCTA";
+// import NewsletterCTA from "./components/footer/NewsletterCTA";
 import AboutSection from "./components/home/AboutSection";
 import BlogSection from "./components/home/BlogSection";
 import Contact from "./components/home/Contact";
@@ -16,7 +16,7 @@ export default function Home() {
       <TestimonialSection />
       <BlogSection />
       <Contact />
-      <NewsletterCTA/>
+      {/* <NewsletterCTA/> */}
     </main>
   );
 }

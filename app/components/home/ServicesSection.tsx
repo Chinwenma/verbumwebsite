@@ -32,7 +32,7 @@ const services = [
 
 const ServicesSection: FC = () => {
   return (
-    <section className="w-full px-4 py-16 bg-gray-200">
+    <section className="w-full px-4 py-16 bg-gray-200 text-justify leading-relaxed tracking-tight">
       <motion.div
         initial={{ opacity: 0, y: -20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -42,7 +42,7 @@ const ServicesSection: FC = () => {
         <h2 className="text-3xl md:text-4xl font-serif font-semibold text-gray-800 text-center">
           Featured Services{" "}
         </h2>
-        <p className=" font-serif font-normal text-gray-700 text-center mb-12 max-w-2xl mx-auto">
+        <p className=" font-serif font-normal text-gray-700 text-center mb-12 max-w-2xl mx-auto leading-relaxed tracking-wider">
           From web and app development to networking, solar installation, and
           ICT training, our services are designed to power your growth and
           productivity.{" "}
@@ -64,7 +64,7 @@ const ServicesSection: FC = () => {
               </div>
             </div>
             <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-            <p className="text-sm text-gray-600 mb-4">{service.description}</p>
+            <p className="text-sm text-gray-600 mb-4 leading-relaxed tracking-wider">{service.description}</p>
           </motion.div>
         ))}
       </div>

@@ -41,14 +41,14 @@ const Contact: FC = () => {
   return (
     <section id="contact" className="px-8 bg-[#8f0000] text-white">
       <form className="max-w-xl mx-auto  space-y-4 ">
-        <h2 className="text-3xl sm:text-4xl lg:text-5xl text-center  tracking-wide mb-4 font-bold pt-8">
+        <h2 className="text-2xl  lg:text-3xl text-center  tracking-wide mb-4 font-bold pt-8">
           Contact Us
         </h2>
-        <p className="text-center text-color">
+        {/* <p className="text-center text-color">
           Simply request a demo today, and within 24 hours, {"you'll"} receive
           full access to explore all the features and benefits we offer.
           Experience it firsthand!
-        </p>
+        </p> */}
 
         <input
           type="text"

@@ -60,15 +60,15 @@ const ServicesPage: FC = () => {
               <h3 className="text-xl font-semibold text-secondary-dark">
                 {service.title}
               </h3>
-              <p className="text-sm text-secondary-dark max-w-xs">
+              <p className="text-sm text-secondary-dark max-w-xs tracking-tighter leading-relaxed text-justify">
                 {service.desc}
               </p>
-              <Link
+              {/* <Link
                 href={`/services/${service.id}`}
                 className="text-[#ff0000] hover:text-gray-300 transition"
               >
                 Learn More
-              </Link>
+              </Link> */}
             </motion.div>
           </div>
         ))}

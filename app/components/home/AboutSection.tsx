@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 const AboutSection = () => {
   return (
-    <section className="w-full py-16 px-4 md:px-20 bg-[#d7e6ef]">
+    <section className="w-full py-16 px-4 md:px-20 bg-[#d7e6ef] text-justify leading-relaxed tracking-wide">
       
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center text-secondary-light">
         <motion.div

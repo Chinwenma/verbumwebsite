@@ -45,7 +45,7 @@ export default async function ServicePage({
           </div>{" "}
           {service.body ? (
             service.body.split("\n\n").map((para, i) => (
-              <p key={i} className="mb-4">
+              <p key={i} className="mb-4 leading-relaxed tracking-wider text-justify">
                 {para}
               </p>
             ))

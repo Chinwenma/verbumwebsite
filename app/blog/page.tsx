@@ -13,12 +13,8 @@ const BlogPage: FC = () => {
         subtitle="Learn more about our mission and values"
         backgroundImage="/assets/a1fiy-v6plo.avif"
       />{" "}
-      <section className="w-full py-12 px-4 flex flex-col items-center gap-10">
-        <h1 className="text-3xl md:text-4xl font-serif font-semibold text-gray-800 text-center">
-          All Blog Posts
-        </h1>
-
-        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl">
+      <section className="w-full p-12 flex flex-col items-center gap-10">
+        <div className="w-full grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl">
           {blogs.map((post, i) => (
             <BlogCard key={post.id} {...post} index={i} />
           ))}
