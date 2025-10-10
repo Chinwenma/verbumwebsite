@@ -67,15 +67,18 @@ export default function AboutPage() {
             Who We Are
           </h2>
           <p className="text-gray-600 text-justify leading-relaxed tracking-wider">
-            Our goal is to bridge the digital skills gap by offering hands-on,
-            practical training in areas such as graphic design, web development,
-            computer literacy, UI/UX design, video editing, cybersecurity, and
-            digital marketing. Whether you`re a beginner or looking to upskill,
-            our program provides the tools and mentorship you need to thrive in
-            the digital economy. At Verbum, we believe technology is a powerful
-            tool for personal and economic growth, and we are committed to
-            empowering communities through knowledge, skills, and innovation.
-            Join us and take the first step towards a tech-driven future!
+            Verbum Networks, in partnership with the Catholic Institute for
+            Development, Justice, and Peace (CIDJAP), is a leading Information
+            Technology company and licensed Internet Service Provider (ISP) by
+            the Nigerian Communications Commission. Our head office is located
+            at the Dominican Institute, Ibadan, South-West Nigeria, and our
+            Enugu branch began operations on March 1st, 2005 at CIDJAP. At
+            Verbum Networks, we are committed to delivering affordable,
+            reliable, and innovative ICT solutions that empower individuals and
+            organizations. We continuously invest in research and development to
+            enhance our services and meet the ever-evolving needs of our
+            clients. Through innovation and excellence, we aim to create a
+            lasting technological impact across Nigeria and beyond.
           </p>
         </div>
       </section>

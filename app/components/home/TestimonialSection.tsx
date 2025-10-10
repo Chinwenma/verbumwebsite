@@ -77,12 +77,12 @@ const TestimonialSection: FC = () => {
                 className="bg-transparent w-full max-w-[350px] flex flex-col items-center"
               >
                 <div className="relative w-[150px] h-[150px]">
-                  <div className="absolute -bottom-2 -left-2 w-[170px] h-[160px] bg-white rounded-[33%_67%_50%_50%_/_50%_14%_86%_50%] z-[-1] shadow-lg" />
+                  <div className="absolute -bottom-2 -left-2 w-[170px] h-[160px] bg-white rounded-[33%_67%_50%_50%_/_50%_14%_86%_50%] z-[-1] shadow-lg " />
                   <Image
                     src={testimonial.image}
                     alt={testimonial.name}
                     fill
-                    className="object-cover rounded-full border-4 border-white shadow-md"
+                    className="object-cover rounded-full border-4 border-yellow-300 shadow-md"
                   />
                 </div>
 
@@ -92,7 +92,7 @@ const TestimonialSection: FC = () => {
                       “
                     </span>
                     {testimonial.text}
-                    <span className="text-5xl absolute -bottom-4 right-2 text-red-500 font-serif">
+                    <span className="text-5xl absolute -bottom-4 right-2 text-red-500 font-serif text-justify">
                       ”
                     </span>
                   </p>

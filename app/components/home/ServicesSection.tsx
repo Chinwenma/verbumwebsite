@@ -42,7 +42,7 @@ const ServicesSection: FC = () => {
         <h2 className="text-3xl md:text-4xl font-serif font-semibold text-gray-800 text-center">
           Featured Services{" "}
         </h2>
-        <p className=" font-serif font-normal text-gray-700 text-center mb-12 max-w-2xl mx-auto leading-relaxed tracking-wider">
+        <p className="font-normal text-gray-700 text-center mb-8 max-w-2xl mx-auto leading-relaxed tracking-wider">
           From web and app development to networking, solar installation, and
           ICT training, our services are designed to power your growth and
           productivity.{" "}
@@ -63,8 +63,8 @@ const ServicesSection: FC = () => {
                 {service.icon}
               </div>
             </div>
-            <h3 className="text-lg font-semibold mb-2">{service.title}</h3>
-            <p className="text-sm text-gray-600 mb-4 leading-relaxed tracking-wider">{service.description}</p>
+            <h3 className="text-lg font-semibold my-2 text-center">{service.title}</h3>
+            <p className="text-sm text-gray-600 leading-normal tracking-tight">{service.description}</p>
           </motion.div>
         ))}
       </div>
