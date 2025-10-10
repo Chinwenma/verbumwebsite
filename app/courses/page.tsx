@@ -32,7 +32,7 @@ const CoursesPage: React.FC = () => {
         subtitle="At Verbum Networks Limited, we offer a variety of hands-on ICT training programs designed to help you master in-demand tech skills"
         backgroundImage="/assets/a1fiy-v6plo.avif"
       />
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto px-4 mt-4 md:mt-12">
         {/* <h2 className="text-2xl sm:text-3xl lg:text-4xl text-center mt-6 font-bold tracking-wide mb-8 bg">
           Our Courses – Learn, Build, Excel
 
