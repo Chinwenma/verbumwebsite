@@ -12,7 +12,7 @@ export const navLinks: NavLink[] = [
 
   { id: 4, label: "Courses", url: "/courses" },
 
-  { id: 5, label: "Blog", url: "/blog" },
+  { id: 5, label: "Projects", url: "/projects" },
 
   {
     id: 6,
