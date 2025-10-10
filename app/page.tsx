@@ -5,6 +5,7 @@ import Contact from "./components/home/Contact";
 import Hero from "./components/home/Hero";
 import ServicesSection from "./components/home/ServicesSection";
 import TestimonialSection from "./components/home/TestimonialSection";
+import VideoGallery from "./components/video/VideoCarousel";
 
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
       <Hero />
       <AboutSection />
       <ServicesSection />
+      <VideoGallery/>
       <TestimonialSection />
       <BlogSection />
       <Contact />

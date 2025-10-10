@@ -1,7 +1,21 @@
-import type { NextConfig } from "next";
+// import type { NextConfig } from "next";
 
-const nextConfig: NextConfig = {
-  /* config options here */
+import { NextConfig } from "next";
+
+// const nextConfig: NextConfig = {
+// };
+
+// export default nextConfig;
+/** @type {import('next').NextConfig} */
+const nextConfig :NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "img.youtube.com",
+      },
+    ],
+  },
 };
 
-export default nextConfig;
+module.exports = nextConfig;
