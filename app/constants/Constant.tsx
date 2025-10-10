@@ -170,6 +170,13 @@ export const servicess: ServiceItem[] = [
     desc: "Through its Technical Education Unit (CICOT), Verbum Networks offers various ICT Research and Training programs.",
     body: "Through its Technical Education Unit (CICOT), Verbum Networks offers various ICT Research and Training programs. We provide hands-on training in web development, networking, cybersecurity, and more, empowering individuals with the skills needed to thrive in the digital age.",
   },
+  {
+    id: 7,
+    title: "Hardware Maintenance & IT Support",
+    image: "/assets/maintain.png",
+    desc: "We offer professional hardware maintenance, repairs, and IT support services to ensure the smooth operation of your systems and equipment. Our team handles diagnostics, upgrades, and preventive maintenance for optimal performance.",
+    body: "We offer professional hardware maintenance, repairs, and IT support services to ensure the smooth operation of your systems and equipment. Our team handles diagnostics, upgrades, and preventive maintenance for optimal performance. We also provide technical support, troubleshooting, and IT consulting to help businesses manage their technology infrastructure effectively.",
+  },
 ];
 export type Courses = {
   id: number;
@@ -242,7 +249,6 @@ This course introduces the core principles of user interface (UI) and user exper
     details: `Duration: 3 months  
 This course provides a thorough understanding of how computer networks operate. You’ll learn about network devices, cabling, IP addressing, and configurations. The program covers both local area networks (LAN) and wide area networks (WAN), including protocols like TCP/IP. You’ll also explore network troubleshooting, firewall configuration, and wireless networking. Hands-on labs and simulations help you practice real networking setups. By the end of the program, you’ll be equipped with the skills needed to build, maintain, and secure computer networks for personal or business use.`,
   },
- 
 ];
 
 interface TeamMember {
