@@ -75,9 +75,9 @@ const Contact: FC = () => {
           className="w-full p-3 border rounded"
         ></textarea>
          <div className="flex flex-col justify-center items-center sm:flex-row sm:items-center gap-4 mt-4">
-        <Link href="/about" >
+        <Link href="/contact" >
           <button   className="bg-[#ff0000] text-white hover:bg-yellow-400 transition-all 200 mb-8 px-5 py-2 rounded-md">
-            All Services
+            Submit
           </button>
         </Link>
       </div>
