@@ -3,8 +3,8 @@
 import { FC } from 'react';
 import { motion } from 'framer-motion';
 import BlogCard from '@/app/blog/BlogCard';
-import Link from 'next/link';
 import { blogs } from '@/lib/blog';
+import Button from '../button/Button';
 
 const BlogSection: FC = () => {
   return (
@@ -37,12 +37,11 @@ const BlogSection: FC = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5, delay: 0.3 }}
       >
-        <Link
-          href="/blog"
-          className="bg-red-600 text-white px-6 py-2 mt-8 rounded hover:bg-red-700 transition"
-        >
-          View All Blogs
-        </Link>
+        <Button
+              link="/blog"
+              label="All Blogs"
+              className="sm:w-auto transition duration-300"
+            />
       </motion.div>
     </section>
   );

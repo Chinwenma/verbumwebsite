@@ -13,9 +13,10 @@ export const navLinks: NavLink[] = [
   { id: 4, label: "Courses", url: "/courses" },
 
   { id: 5, label: "Projects", url: "/projects" },
+  {id: 6, label: "Gallery", url: "/gallery" },
 
   {
-    id: 6,
+    id: 7,
     label: "Contact",
     url: "/contact",
   },

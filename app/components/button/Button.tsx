@@ -19,7 +19,7 @@ const Button: React.FC<ButtonProps> = ({
     <Link
       href={link}
       rel="noopener noreferrer"
-      className={`inline-block bg-[#ff0000] hover:bg-red-700 text-white font-semibold py-2 px-5 rounded shadow-md transition-all duration-300 ${className}`}
+      className={`inline-block bg-[#8f0000] hover:bg-[#ff0000] text-white font-semibold py-2 px-5 rounded shadow-md transition-all duration-300 ${className}`}
     >
       {label}
     </Link>

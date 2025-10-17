@@ -5,6 +5,7 @@ import Image from "next/image";
 import { FC } from "react";
 import { servicess } from "@/app/constants/Constant";
 import PageBanner from "../components/pagebanner/PageBanner";
+import Button from "../components/button/Button";
 
 const softwareProducts = [
   {
@@ -12,14 +13,14 @@ const softwareProducts = [
     title: "Hospital Management System",
     desc: "Our HMS software streamlines all hospital activities including patient management, staff scheduling, billing, and inventory management.",
     image: "/assets/dash.png",
-    demoLink: "/book-demo/hms",
+    demoLink: "https://verbumhealth.com/",
   },
   {
     id: 2,
     title: "School Portal",
     desc: "The School Portal allows schools to manage admissions, student records, teacher schedules, and communication seamlessly online.",
-    image: "/assets/school-portal.webp",
-    demoLink: "/book-demo/school-portal",
+    image: "/assets/students.png",
+    demoLink: "/contact",
   },
 ];
 
@@ -115,12 +116,11 @@ const ServicesPage: FC = () => {
                   {product.title}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{product.desc}</p>
-                <a
-                  href={product.demoLink}
-                  className="inline-block  mt-2 px-6 py-3 bg-[#8f0000] text-white font-semibold rounded hover:bg-[#5484ab] transition"
-                >
-                  Book a Demo
-                </a>
+               <Button
+              link={product.demoLink}
+              label="Book a Demo"
+              className="sm:w-auto transition duration-300"
+            />
               </div>
             </motion.div>
           ))}
