@@ -60,14 +60,14 @@ const ServicesPage: FC = () => {
           {servicess.map((service, index) => (
             <div
               key={service.title}
-              className="bg-gray-100 w-full sm:w-[85%] md:w-[45%] lg:w-[30%] min-h-[350px] p-6 rounded-lg shadow hover:bg-gradient-to-br hover:from-[#020024] hover:to-[#244860] transition-all flex flex-col items-center text-center hover:cursor-pointer hover:text-white"
+              className="bg-gray-100 w-full sm:w-[85%] md:w-[45%] lg:w-[30%] min-h-[350px] p-6 rounded-lg shadow hover:bg-gradient-to-br hover:from-[#020024] hover:to-[#244860] transition-all flex flex-col items-center text-center hover:cursor-pointer hover:text-white h-full"
             >
               <motion.div
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 viewport={{ once: true }}
-                className="flex flex-col items-center justify-center gap-4"
+                className="flex flex-col items-center justify-center gap-4 "
               >
                 <Image
                   src={service.image}
@@ -79,8 +79,8 @@ const ServicesPage: FC = () => {
                 <h3 className="text-xl font-semibold text-secondary-dark">
                   {service.title}
                 </h3>
-                <p className="text-sm text-secondary-dark max-w-xs tracking-tighter leading-relaxed text-justify">
-                  {service.desc}
+                <p className="text-sm text-secondary-dark max-w-xs tracking-tighter  leading-relaxed text-justify">
+                  {service.body}
                 </p>
               </motion.div>
             </div>

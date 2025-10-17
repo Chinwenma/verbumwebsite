@@ -133,52 +133,53 @@ export const servicess: ServiceItem[] = [
     id: 1,
     image: "/assets/atpn9-27cm1.avif",
     title: "Website and app development",
-    desc: "We develop matchless website solutions to increase the efficiency and competitive advantage of companies, institutions and organizations b...",
+    desc: "Creating custom websites and apps that boost efficiency, engagement, and online presence.",
     body: "We develop matchless website solutions to increase the efficiency and competitive advantage of companies, institutions and organizations by providing them with a strong online presence. Our services include custom website design, e-commerce solutions, content management systems, and web application development.",
   },
   {
     id: 2,
     image: "/assets/a1muo-upgac.avif",
     title: "Networking & Internet",
-    desc: "Our VSAT internet is an Internet connection via satellite, which means it can be used anywhere in Nigeria, in remote locations...",
+    desc: "Reliable internet and networking solutions, even in remote areas using VSAT technology.",
     body: "Our VSAT internet is an Internet connection via satellite, which means it can be used anywhere in Nigeria, in remote locations where other forms of internet connection are not available. We also provide networking solutions including LAN/WAN setup, network security, and maintenance services.",
   },
   {
     id: 3,
     image: "/assets/aq31q-9poim.webp",
     title: "Solar installation",
-    desc: "In an era where sustainable energy solutions are imperative, Verbum Networks Limited is at the forefront, offering state...",
+    desc: "Designing and implementing tailored solar solutions for homes, businesses, and institutions.",
     body: "In an era where sustainable energy solutions are imperative, Verbum Networks Limited is at the forefront, offering state-of-the-art solar installation services. Our team of experts specializes in designing and implementing solar power systems tailored to meet the unique energy needs of homes, businesses, and institutions.",
   },
   {
     id: 4,
     image: "/assets/asizu-n23px.avif",
     title: "CCTV installation",
-    desc: "We offer complete computer-based CCTV/DVR, IP and WiFi surveillance systems with affordable rates. We also deploy PABX telep...",
+    desc: "Comprehensive CCTV and surveillance systems with reliable security and monitoring solutions.",
     body: "We offer complete computer-based CCTV/DVR, IP and WiFi surveillance systems with affordable rates. We also deploy PABX telephone systems, ensuring comprehensive security and communication solutions for our clients.",
   },
   {
     id: 5,
     image: "/assets/a0qrj-majls.avif",
     title: "Graphics design",
-    desc: "We design all ranges of graphic publications - for digital media, print, broadcast, etc., and we deliver high quality products.",
+    desc: "High-quality graphic designs for digital, print, and marketing media to strengthen your brand.",
     body: "We design all ranges of graphic publications - for digital media, print, broadcast, etc., and we deliver high quality products. Our services include logo design, branding, marketing materials, and digital graphics that effectively communicate your message and enhance your brand identity.",
   },
   {
     id: 6,
     image: "/assets/a65qf-w8ee7.avif",
     title: "ICT education",
-    desc: "Through its Technical Education Unit (CICOT), Verbum Networks offers various ICT Research and Training programs.",
+    desc: "Hands-on ICT training programs in web development, networking, and cybersecurity.",
     body: "Through its Technical Education Unit (CICOT), Verbum Networks offers various ICT Research and Training programs. We provide hands-on training in web development, networking, cybersecurity, and more, empowering individuals with the skills needed to thrive in the digital age.",
   },
   {
     id: 7,
     title: "Hardware Maintenance & IT Support",
     image: "/assets/maintain.png",
-    desc: "We offer professional hardware maintenance, repairs, and IT support services to ensure the smooth operation of your systems and equipment. Our team handles diagnostics, upgrades, and preventive maintenance for optimal performance.",
+    desc: "Expert hardware maintenance and IT support to keep systems running smoothly.",
     body: "We offer professional hardware maintenance, repairs, and IT support services to ensure the smooth operation of your systems and equipment. Our team handles diagnostics, upgrades, and preventive maintenance for optimal performance. We also provide technical support, troubleshooting, and IT consulting to help businesses manage their technology infrastructure effectively.",
   },
 ];
+
 export type Courses = {
   id: number;
   title: string;
