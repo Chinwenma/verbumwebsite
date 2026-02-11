@@ -8,7 +8,7 @@ import {
   FaInstagram,
   FaTiktok,
 } from "react-icons/fa";
-import PageBanner from "../components/pagebanner/PageBanner";
+import PageBanner from "../../components/pagebanner/PageBanner";
 
 // import { motion } from 'framer-motion';
 

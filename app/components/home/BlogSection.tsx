@@ -2,7 +2,7 @@
 
 import { FC } from 'react';
 import { motion } from 'framer-motion';
-import BlogCard from '@/app/blog/BlogCard';
+import BlogCard from '@/app/(frontend)/blog/BlogCard';
 import { blogs } from '@/lib/blog';
 import Button from '../button/Button';
 

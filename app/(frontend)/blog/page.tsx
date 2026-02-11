@@ -3,7 +3,7 @@
 import { FC } from "react";
 import BlogCard from "./BlogCard"; // adjust the path
 import { blogs } from "@/lib/blog";
-import PageBanner from "../components/pagebanner/PageBanner";
+import PageBanner from "../../components/pagebanner/PageBanner";
 
 const BlogPage: FC = () => {
   return (

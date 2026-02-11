@@ -5,8 +5,8 @@ import Image from "next/image";
 import Modal from "./Modal";
 
 import { motion } from "framer-motion";
-import { coursesCard } from "../constants/Constant";
-import PageBanner from "../components/pagebanner/PageBanner";
+import { coursesCard } from "../../constants/Constant";
+import PageBanner from "../../components/pagebanner/PageBanner";
 
 const CoursesPage: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);

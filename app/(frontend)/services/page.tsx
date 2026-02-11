@@ -4,8 +4,8 @@ import { motion } from "framer-motion";
 import Image from "next/image";
 import { FC } from "react";
 import { servicess } from "@/app/constants/Constant";
-import PageBanner from "../components/pagebanner/PageBanner";
-import Button from "../components/button/Button";
+import PageBanner from "../../components/pagebanner/PageBanner";
+import Button from "../../components/button/Button";
 
 const softwareProducts = [
   {

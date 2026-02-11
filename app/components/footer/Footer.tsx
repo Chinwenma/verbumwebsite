@@ -1,14 +1,14 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { navLinks } from '@/app/constants/Constant';
+import Link from "next/link";
+import { navLinks } from "@/app/constants/Constant";
 
 const listItems = [
-  { label: 'Why Verbum Networks', url: '/about' },
-  { label: 'Mentor', url: '#contact' },
-  { label: 'Testimonial', url: '#testimonials' },
-  { label: 'Donate', url: '#contact' },
-  { label: 'Volunteer', url: '#contact' },
+  { label: "Why Verbum Networks", url: "/about" },
+  { label: "Mentor", url: "#contact" },
+  { label: "Testimonial", url: "#testimonials" },
+  { label: "Donate", url: "#contact" },
+  { label: "Volunteer", url: "#contact" },
 ];
 
 export const Footer = () => {
@@ -18,36 +18,36 @@ export const Footer = () => {
         <div>
           <h2 className=" text-lg font-bold mb-2">Verbum Newtorks</h2>
           <p className="text-sm mb-4">
-           Verbum Networks offers a wide range of ICT services to the public, including wireless internet services, software development, ICT training, digital transformation solutions, and technology consultancy.
+            Verbum Networks offers a wide range of ICT services to the public,
+            including wireless internet services, software development, ICT
+            training, digital transformation solutions, and technology
+            consultancy.
           </p>
-        
         </div>
 
         <div>
           <h3 className="font-semibold mb-3">Verbum</h3>
           <ul className="space-y-2 text-sm">
-            {listItems.map((item)=>(
-              <li key={item.label} className='hover:text-[#f93624] transition'>
-                <Link href={item.url}>
-                {item.label}
-                </Link>
+            {listItems.map((item) => (
+              <li key={item.label} className="hover:text-[#f93624] transition">
+                <Link href={item.url}>{item.label}</Link>
               </li>
             ))}
           </ul>
         </div>
 
         {/* Company Links */}
-        <div  >
+        <div>
           <h3 className=" font-semibold mb-3">Company</h3>
           <ul className="space-y-2 text-sm">
-            {navLinks.map((link)=>(
-              <li key={link.id} className='hover:text-[#f93624] transition hover:cursor-pointer'>
-                <Link href={link.url}>
-                  {link.label}
-                </Link>
+            {navLinks.map((link) => (
+              <li
+                key={link.id}
+                className="hover:text-[#f93624] transition hover:cursor-pointer"
+              >
+                <Link href={link.url}>{link.label}</Link>
               </li>
             ))}
-           
           </ul>
         </div>
 
@@ -58,10 +58,11 @@ export const Footer = () => {
             <li>1-3 CIDJAP Street</li>
             <li>Behind MRS Filling Station Uwani, Enugu</li>
             <li>info@verbumnetworksenugu.com</li>
-         
+            <li>
+              {" "}
+              <Link href="/login">staff login</Link>
+            </li>
           </ul>
-
-         
         </div>
       </div>
 

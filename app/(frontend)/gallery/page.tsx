@@ -11,7 +11,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Thumbnails from "yet-another-react-lightbox/plugins/thumbnails";
 import Captions from "yet-another-react-lightbox/plugins/captions";
-import PageBanner from "../components/pagebanner/PageBanner";
+import PageBanner from "../../components/pagebanner/PageBanner";
 
 const galleryImages = [
   {

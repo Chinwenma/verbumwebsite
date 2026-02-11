@@ -1,5 +1,5 @@
 "use client";
-import PageBanner from "../components/pagebanner/PageBanner";
+import PageBanner from "../../components/pagebanner/PageBanner";
 import Image from "next/image";
 import { motion } from "framer-motion";
 import { team } from "@/app/constants/Constant";
