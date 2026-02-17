@@ -11,19 +11,40 @@ export function Sidebar() {
       </div>
 
       <nav className="flex-1 p-4 space-y-2">
-        <Link href="/dashboard" className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100">
+        <Link
+          href="/dashboard"
+          className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100"
+        >
           <Home size={18} /> Overview
         </Link>
 
-        <Link href="/dashboard/staff" className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100">
-          <Users size={18} /> Staff
+        <Link
+          href="/dashboard/webdepartment"
+          className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100"
+        >
+          <Users size={18} />
+          Web Department
+        </Link>
+        <Link
+          href="/dashboard/networking"
+          className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100"
+        >
+          <Users size={18} />
+          Networking{" "}
         </Link>
 
-        <Link href="/dashboard/reports" className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100">
-          <BarChart3 size={18} /> Reports
+        <Link
+          href="/dashboard/academy"
+          className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100"
+        >
+          <BarChart3 size={18} />
+          Academy
         </Link>
 
-        <Link href="/dashboard/settings" className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100">
+        <Link
+          href="/dashboard/settings"
+          className="flex items-center gap-3 px-4 py-2 rounded-lg hover:bg-gray-100"
+        >
           <Settings size={18} /> Settings
         </Link>
       </nav>
