@@ -1,18 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
-import { useRouter, useParams } from "next/navigation";
+import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { WebClient, webClients } from "@/lib/web/clients";
-// import { WebClients, WebClient } from "@/lib/web/clients";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
-export default function EditWebClientPage() {
+export default function AddNetworkingClientPage() {
   const router = useRouter();
-  const params = useParams();
-  const clientId = Number(params.id); // convert from string to number
 
-  const [formData, setFormData] = useState<WebClient>({
-    id: 0,
+  const [formData, setFormData] = useState({
     name: "",
     contact: "",
     expiry: "",
@@ -21,46 +18,52 @@ export default function EditWebClientPage() {
     projectDescription: "",
   });
 
-  // ✅ Load existing client
-  useEffect(() => {
-    const existingClient = webClients.find(
-      (client) => client.id === clientId
-    );
-
-    if (existingClient) {
-      setFormData(existingClient);
-    }
-  }, [clientId]);
+  const [loading, setLoading] = useState(false);
 
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [e.target.name]: e.target.value,
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
 
-    console.log("Updated client:", clientId, formData);
+    try {
+      console.log("New client data:", formData);
 
-    // TODO: Connect to PUT/PATCH API
+      // TODO: connect to backend POST
+      // await fetch('/api/Networking-clients', { method: 'POST', body: JSON.stringify(formData) })
 
-    router.push("/dashboard/web-clients");
+      toast.success("Networking client added successfully 🎉", {
+        position: "top-right",
+        autoClose: 2000,
+      });
+
+      setTimeout(() => {
+        router.push("/dashboard/Networking-clients");
+      }, 2200);
+    } catch (error) {
+      toast.error("Something went wrong. Try again.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="p-6 md:p-10 max-w-3xl mx-auto">
+      <ToastContainer />
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-white rounded-2xl shadow-md p-6"
       >
-        <h1 className="text-2xl font-semibold mb-6">Edit Web Client</h1>
+        <h1 className="text-2xl font-semibold mb-6">Add New Networking Client</h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
@@ -113,6 +116,7 @@ export default function EditWebClientPage() {
               value={formData.domain}
               onChange={handleChange}
               className="w-full border rounded-lg px-3 py-2"
+              placeholder="example.com"
             />
           </div>
 
@@ -138,9 +142,10 @@ export default function EditWebClientPage() {
 
             <button
               type="submit"
-              className="px-4 py-2 cursor-pointer bg-green-600 text-white rounded-lg hover:bg-green-700 transition"
+              disabled={loading}
+              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition disabled:opacity-50"
             >
-              Save Changes
+              {loading ? "Saving..." : "Add Client"}
             </button>
           </div>
         </form>

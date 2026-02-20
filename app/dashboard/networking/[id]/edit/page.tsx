@@ -1,18 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { WebClient, webClients } from "@/lib/web/clients";
-// import { WebClients, WebClient } from "@/lib/web/clients";
 
-export default function EditWebClientPage() {
+export default function EditNetworkingClientPage() {
   const router = useRouter();
   const params = useParams();
-  const clientId = Number(params.id); // convert from string to number
 
-  const [formData, setFormData] = useState<WebClient>({
-    id: 0,
+  // Mock existing client data (replace with API fetch later)
+  const [formData, setFormData] = useState({
     name: "",
     contact: "",
     expiry: "",
@@ -21,36 +18,23 @@ export default function EditWebClientPage() {
     projectDescription: "",
   });
 
-  // ✅ Load existing client
-  useEffect(() => {
-    const existingClient = webClients.find(
-      (client) => client.id === clientId
-    );
-
-    if (existingClient) {
-      setFormData(existingClient);
-    }
-  }, [clientId]);
-
   const handleChange = (
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
-    const { name, value } = e.target;
-
     setFormData((prev) => ({
       ...prev,
-      [name]: value,
+      [e.target.name]: e.target.value,
     }));
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    console.log("Updated client:", clientId, formData);
+    console.log("Updated client:", params.id, formData);
 
-    // TODO: Connect to PUT/PATCH API
+    // TODO: connect to backend PUT/PATCH
 
-    router.push("/dashboard/web-clients");
+    router.push("/dashboard/Networking-clients");
   };
 
   return (
@@ -60,7 +44,7 @@ export default function EditWebClientPage() {
         animate={{ opacity: 1, y: 0 }}
         className="bg-white rounded-2xl shadow-md p-6"
       >
-        <h1 className="text-2xl font-semibold mb-6">Edit Web Client</h1>
+        <h1 className="text-2xl font-semibold mb-6">Edit Networking Client</h1>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
