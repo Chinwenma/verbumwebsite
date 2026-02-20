@@ -10,8 +10,6 @@ import {
 } from "react-icons/fa";
 import PageBanner from "../../components/pagebanner/PageBanner";
 
-// import { motion } from 'framer-motion';
-
 export default function ContactPage() {
   return (
     <>
@@ -68,7 +66,10 @@ export default function ContactPage() {
             </h2>
             <div className="flex items-start gap-4">
               <FaMapMarkerAlt className="text-[#f90733] mt-1" />
-              <p>1-3 Cidjap Street. Behind MRS Filling Station Uwani, Enugu, Nigeria</p>
+              <p>
+                1-3 Cidjap Street. Behind MRS Filling Station Uwani, Enugu,
+                Nigeria
+              </p>
             </div>
             <div className="flex items-start gap-4">
               <FaPhone className="text-[#f90733] mt-1" />
@@ -78,8 +79,8 @@ export default function ContactPage() {
               <FaEnvelope className="text-[#f90733] mt-1" />
               <p>info@verbumnetworksenugu.com</p>
             </div>
-             <div className="flex items-center gap-3">
-               <span className="text-red-500 text-xl">⏰</span>
+            <div className="flex items-center gap-3">
+              <span className="text-red-500 text-xl">⏰</span>
               <p>Tuesday - Friday; 8:00 AM to 5:00 PM</p>
             </div>
             <div className="pt-4">
@@ -122,7 +123,6 @@ export default function ContactPage() {
                 </a>
               </div>
             </div>
-           
           </div>
         </div>
       </section>

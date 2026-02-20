@@ -26,7 +26,7 @@ const softwareProducts = [
 
 const ServicesPage: FC = () => {
   return (
-    <div>
+    <>
       <PageBanner
         title="Our Services"
         subtitle="learn more about what we offer"
@@ -116,17 +116,17 @@ const ServicesPage: FC = () => {
                   {product.title}
                 </h3>
                 <p className="text-gray-700 leading-relaxed">{product.desc}</p>
-               <Button
-              link={product.demoLink}
-              label="Book a Demo"
-              className="sm:w-auto transition duration-300"
-            />
+                <Button
+                  link={product.demoLink}
+                  label="Book a Demo"
+                  className="sm:w-auto transition duration-300"
+                />
               </div>
             </motion.div>
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

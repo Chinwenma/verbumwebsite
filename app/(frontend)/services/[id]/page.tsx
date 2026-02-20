@@ -1,4 +1,3 @@
-
 import PageBanner from "@/app/components/pagebanner/PageBanner";
 import { servicess } from "@/app/constants/Constant";
 import Image from "next/image";
@@ -17,7 +16,7 @@ export default async function ServicePage({
   }
 
   return (
-    <main className="min-h-screen bg-gray-50">
+    <div className="min-h-screen bg-gray-50">
       <PageBanner
         title={service.title}
         subtitle="Learn more about our mission and values"
@@ -27,12 +26,12 @@ export default async function ServicePage({
       {/* Content Section */}
       <section className="max-w-4xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
         <div className="text-gray-800 text-base sm:text-lg leading-relaxed break-words">
-           <Link
-        href="/services"
-        className="text-blue-600 hover:underline mb-4 inline-block"
-      >
-        ← Back to Blogs
-      </Link>
+          <Link
+            href="/services"
+            className="text-blue-600 hover:underline mb-4 inline-block"
+          >
+            ← Back to Blogs
+          </Link>
           <div className="w-full mx-auto mb-6">
             {" "}
             <Image
@@ -45,7 +44,10 @@ export default async function ServicePage({
           </div>{" "}
           {service.body ? (
             service.body.split("\n\n").map((para, i) => (
-              <p key={i} className="mb-4 leading-relaxed tracking-wider text-justify">
+              <p
+                key={i}
+                className="mb-4 leading-relaxed tracking-wider text-justify"
+              >
                 {para}
               </p>
             ))
@@ -54,6 +56,6 @@ export default async function ServicePage({
           )}
         </div>
       </section>
-    </main>
+    </div>
   );
 }

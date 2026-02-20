@@ -7,9 +7,9 @@ import PageBanner from "../../components/pagebanner/PageBanner";
 
 const BlogPage: FC = () => {
   return (
-    <div>
-      <PageBanner 
-       title="Blog Posts"
+    <>
+      <PageBanner
+        title="Blog Posts"
         subtitle="Learn more about our mission and values"
         backgroundImage="/assets/a1fiy-v6plo.avif"
       />{" "}
@@ -20,7 +20,7 @@ const BlogPage: FC = () => {
           ))}
         </div>
       </section>
-    </div>
+    </>
   );
 };
 

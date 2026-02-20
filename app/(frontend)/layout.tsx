@@ -3,7 +3,6 @@ import "../globals.css";
 import Navbar from "../components/nav/Navbar";
 import { Footer } from "../components/footer/Footer";
 
-
 export const metadata: Metadata = {
   title: "Verbum Networks Limited Enugu",
   description:
@@ -16,12 +15,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body>
-        <Navbar />
-        {children}
-        <Footer />
-      </body>
-    </html>
+    <>
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </>
   );
 }

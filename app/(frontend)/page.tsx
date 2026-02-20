@@ -7,18 +7,17 @@ import ServicesSection from "../components/home/ServicesSection";
 import TestimonialSection from "../components/home/TestimonialSection";
 import VideoGallery from "../components/video/VideoCarousel";
 
-
 export default function Home() {
   return (
-    <main >
+    <>
       <Hero />
       <AboutSection />
       <ServicesSection />
-      <VideoGallery/>
+      <VideoGallery />
       <TestimonialSection />
       <BlogSection />
       <Contact />
       {/* <NewsletterCTA/> */}
-    </main>
+    </>
   );
 }

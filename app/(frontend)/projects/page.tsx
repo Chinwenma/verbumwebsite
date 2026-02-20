@@ -59,7 +59,7 @@ const projects: Project[] = [
 
 export default function ProjectsPage() {
   return (
-    <main>
+    <>
       <PageBanner
         title="Projects"
         subtitle="Empowering institutions, businesses, and communities through technology and innovation."
@@ -103,6 +103,6 @@ export default function ProjectsPage() {
           ))}
         </div>
       </section>
-    </main>
+    </>
   );
 }

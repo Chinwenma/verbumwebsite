@@ -14,7 +14,7 @@ const CoursesPage: React.FC = () => {
     (typeof coursesCard)[0] | null
   >(null);
 
-  const openModal = (course: (typeof  coursesCard)[0]) => {
+  const openModal = (course: (typeof coursesCard)[0]) => {
     setSelectedFeature(course);
     setIsOpen(true);
   };
@@ -27,7 +27,7 @@ const CoursesPage: React.FC = () => {
   return (
     <section id="features" className="py-10 bg-gray-100">
       <PageBanner
-       title="          Our Courses – Learn, Build, Excel
+        title="Our Courses – Learn, Build, Excel
 "
         subtitle="At Verbum Networks Limited, we offer a variety of hands-on ICT training programs designed to help you master in-demand tech skills"
         backgroundImage="/assets/a1fiy-v6plo.avif"
@@ -43,7 +43,7 @@ const CoursesPage: React.FC = () => {
         </p> */}
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          { coursesCard.map((course, index) => (
+          {coursesCard.map((course, index) => (
             <motion.div
               key={course.id}
               onClick={() => openModal(course)}

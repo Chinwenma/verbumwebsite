@@ -240,7 +240,6 @@ const galleryImages = [
   },
 ];
 
-
 const ITEMS_PER_PAGE = 6;
 
 export default function GalleryPage() {
@@ -258,7 +257,7 @@ export default function GalleryPage() {
     setCurrentPage((prev) => Math.min(prev + 1, totalPages));
 
   return (
-    <main>
+    <>
       <PageBanner
         title="Gallery"
         subtitle="Explore our inspiring moments"
@@ -325,6 +324,6 @@ export default function GalleryPage() {
           />
         </div>
       </div>
-    </main>
+    </>
   );
 }
