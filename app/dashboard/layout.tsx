@@ -1,7 +1,6 @@
 import { Sidebar } from "../components/dashboard/sidebar/SideBar";
 import "../globals.css";
 
-
 export default function DashboardLayout({
   children,
 }: {
@@ -9,11 +8,13 @@ export default function DashboardLayout({
 }) {
   return (
     <div className="flex min-h-screen bg-gray-100">
+      {/* Sidebar */}
       <Sidebar />
 
-      <div className="flex-1">
+      {/* Main Content */}
+      <main className="flex-1 overflow-y-auto p-4 sm:p-6">
         {children}
-      </div>
+      </main>
     </div>
   );
 }
