@@ -37,7 +37,6 @@ export function Sidebar() {
 
   return (
     <>
-      {/* ================= MOBILE ================= */}
       <div className="md:hidden">
         {/* Mobile Top Bar */}
         <div className="flex items-center justify-between p-4">
