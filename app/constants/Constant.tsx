@@ -299,20 +299,20 @@ export const team: TeamMember[] = [
     image: "/assets/Peculiar.png",
   },
 
-  {
-    id: 7,
-    name: "Kingsley Ejiofor",
-    role: "IT Support officer",
-    image: "/assets/Kingsely.png",
-  },
+  // {
+  //   id: 7,
+  //   name: "Kingsley Ejiofor",
+  //   role: "IT Support officer",
+  //   image: "/assets/Kingsely.png",
+  // },
     {
-    id: 8,
-    name: "Frank",
+    id: 7,
+    name: "Frank Emmanuel ",
     role: "IT Support officer",
     image: "/assets/wap3.jpeg",
   },
     {
-    id: 9,
+    id: 8,
     name: "Ezeh Oluchukwu Gloria",
     role: "Cafe Attendant",
     image: "/assets/wap2.jpeg",
