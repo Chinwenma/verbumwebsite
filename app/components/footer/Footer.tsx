@@ -60,7 +60,7 @@ export const Footer = () => {
             <li>info@verbumnetworksenugu.com</li>
             <li>
               {" "}
-              <Link href="/login">staff login</Link>
+              <Link href="/login" className="opacity-5">staff login</Link>
             </li>
           </ul>
         </div>

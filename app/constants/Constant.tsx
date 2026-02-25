@@ -263,9 +263,9 @@ interface TeamMember {
 export const team: TeamMember[] = [
   {
     id: 1,
-    name: "Rev. Chukwu Paul OP",
+    name: "Rev. Fr. Magnus O Anyiam, OP.",
     role: "Director",
-    image: "/assets/Director.png",
+    image: "/assets/direct.jpeg",
   },
   {
     id: 2,
@@ -295,20 +295,26 @@ export const team: TeamMember[] = [
   {
     id: 6,
     name: "Eze Peculiar Chigaemezu",
-    role: "Tutor | Graphics Designer",
+    role: "Product Designer | Tutor",
     image: "/assets/Peculiar.png",
-  },
-  {
-    id: 7,
-    name: "Kosisochukwu Nwankwo",
-    role: "Web Developer",
-    image: "/assets/Kosi.png",
   },
 
   {
-    id: 8,
+    id: 7,
     name: "Kingsley Ejiofor",
-    role: "Cafe Attendant",
+    role: "IT Support officer",
     image: "/assets/Kingsely.png",
+  },
+    {
+    id: 8,
+    name: "Frank",
+    role: "IT Support officer",
+    image: "/assets/wap3.jpeg",
+  },
+    {
+    id: 9,
+    name: "Ezeh Oluchukwu Gloria",
+    role: "Cafe Attendant",
+    image: "/assets/wap2.jpeg",
   },
 ];
