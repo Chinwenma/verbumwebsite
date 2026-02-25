@@ -2,6 +2,8 @@
 
 import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
+import { motion } from "framer-motion";
+
 import { toast } from "react-toastify";
 import { ProjectStatus } from "@/lib/projects/projects";
 
@@ -62,7 +64,6 @@ export default function AddProjectPage() {
     try {
       setLoading(true);
 
-      // 🔥 Backend ready structure
       const payload = {
         ...formData,
         budget: Number(formData.budget),
@@ -94,20 +95,31 @@ export default function AddProjectPage() {
   };
 
   return (
-    <main className="p-6 max-w-3xl">
+    <main className="p-6 md:p-10 max-w-3xl mx-auto">
+       <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        className="bg-white rounded-2xl shadow-md p-6"
+      >
       <h2 className="text-2xl font-semibold mb-6">Add New Project</h2>
 
-      <form onSubmit={handleSubmit} className="space-y-5">
-
-        <input
+      <form onSubmit={handleSubmit} className="space-y-4">
+ <div>
+            <label className="block text-sm mb-1">Project Title</label>
+             <input
           type="text"
           name="title"
           placeholder="Project Title"
           value={formData.title}
           onChange={handleChange}
           className="w-full border px-3 py-2 rounded-lg"
+          required
         />
-
+           
+          </div>
+       
+<div>
+            <label className="block text-sm mb-1">Client Name</label>
         <input
           type="text"
           name="client"
@@ -116,6 +128,7 @@ export default function AddProjectPage() {
           onChange={handleChange}
           className="w-full border px-3 py-2 rounded-lg"
         />
+        </div>
 
         <select
           name="status"
@@ -190,6 +203,7 @@ export default function AddProjectPage() {
           {loading ? "Creating Project..." : "Create Project"}
         </button>
       </form>
+      </motion.div>
     </main>
   );
 }

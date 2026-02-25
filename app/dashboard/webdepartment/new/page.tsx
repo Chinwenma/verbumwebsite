@@ -3,8 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
 
 export default function AddWebClientPage() {
   const router = useRouter();
@@ -56,14 +55,13 @@ export default function AddWebClientPage() {
 
   return (
     <div className="p-6 md:p-10 max-w-3xl mx-auto">
-      <ToastContainer />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-white rounded-2xl shadow-md p-6"
       >
-        <h1 className="text-2xl font-semibold mb-6">Add New Web Client</h1>
+        <h2 className="text-2xl font-semibold mb-6">Add New Web Client</h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
           <div>
