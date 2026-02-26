@@ -1,9 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
 import { toast } from "react-toastify";
+import Button from "@/app/components/dashboard/btn/AddNewButton";
 
 export default function AddWebClientPage() {
   const router = useRouter();
@@ -28,24 +29,44 @@ export default function AddWebClientPage() {
     }));
   };
 
+  // ✅ Form Validation
+  const isFormValid = useMemo(() => {
+    return (
+      formData.name &&
+      formData.contact &&
+      formData.expiry &&
+      formData.address &&
+      formData.domain &&
+      formData.projectDescription
+    );
+  }, [formData]);
+
+  // ✅ Submit Handler (Stay on Page After Creation)
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    if (!isFormValid) return;
+
     setLoading(true);
 
     try {
       console.log("New client data:", formData);
-
-      // TODO: connect to backend POST
-      // await fetch('/api/web-clients', { method: 'POST', body: JSON.stringify(formData) })
 
       toast.success("Web client added successfully 🎉", {
         position: "top-right",
         autoClose: 2000,
       });
 
-      setTimeout(() => {
-        router.push("/dashboard/web-clients");
-      }, 2200);
+      // Reset form but stay on page
+      setFormData({
+        name: "",
+        contact: "",
+        expiry: "",
+        address: "",
+        domain: "",
+        projectDescription: "",
+      });
+
     } catch (error) {
       toast.error("Something went wrong. Try again.");
     } finally {
@@ -55,15 +76,17 @@ export default function AddWebClientPage() {
 
   return (
     <div className="p-6 md:p-10 max-w-3xl mx-auto">
-
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-white rounded-2xl shadow-md p-6"
       >
-        <h2 className="text-2xl font-semibold mb-6">Add New Web Client</h2>
+        <h2 className="text-2xl font-semibold mb-6">
+          Add New Web Client
+        </h2>
 
         <form onSubmit={handleSubmit} className="space-y-4">
+
           <div>
             <label className="block text-sm mb-1">Client Name</label>
             <input
@@ -138,14 +161,14 @@ export default function AddWebClientPage() {
               Cancel
             </button>
 
-            <button
-              type="submit"
-              disabled={loading}
-              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition disabled:opacity-50"
-            >
-              {loading ? "Saving..." : "Add Client"}
-            </button>
+           <Button
+             type="submit"
+             label="Add client"
+             loading={loading}
+             disabled={!isFormValid}
+           />
           </div>
+
         </form>
       </motion.div>
     </div>

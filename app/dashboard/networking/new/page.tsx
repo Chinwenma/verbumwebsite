@@ -1,10 +1,10 @@
 "use client";
 
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useRouter } from "next/navigation";
 import { motion } from "framer-motion";
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { toast } from "react-toastify";
+import Button from "@/app/components/dashboard/btn/AddNewButton";
 
 export default function AddNetworkingClientPage() {
   const router = useRouter();
@@ -28,35 +28,50 @@ export default function AddNetworkingClientPage() {
       [e.target.name]: e.target.value,
     }));
   };
+const isFormValid = useMemo(() => {
+  return (
+    formData.name &&
+    formData.contact &&
+    formData.expiry &&
+    formData.address &&
+    formData.domain &&
+    formData.projectDescription
+  );
+}, [formData]);
+ const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  e.preventDefault();
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    setLoading(true);
+  if (!isFormValid) return;
 
-    try {
-      console.log("New client data:", formData);
+  setLoading(true);
 
-      // TODO: connect to backend POST
-      // await fetch('/api/Networking-clients', { method: 'POST', body: JSON.stringify(formData) })
+  try {
+    console.log("New client data:", formData);
 
-      toast.success("Networking client added successfully 🎉", {
-        position: "top-right",
-        autoClose: 2000,
-      });
+    toast.success("Networking client added successfully 🎉", {
+      position: "top-right",
+      autoClose: 2000,
+    });
 
-      setTimeout(() => {
-        router.push("/dashboard/Networking-clients");
-      }, 2200);
-    } catch (error) {
-      toast.error("Something went wrong. Try again.");
-    } finally {
-      setLoading(false);
-    }
-  };
+    // Reset form but stay on page
+    setFormData({
+      name: "",
+      contact: "",
+      expiry: "",
+      address: "",
+      domain: "",
+      projectDescription: "",
+    });
+
+  } catch (error) {
+    toast.error("Something went wrong. Try again.");
+  } finally {
+    setLoading(false);
+  }
+};
 
   return (
     <div className="p-6 md:p-10 max-w-3xl mx-auto">
-      <ToastContainer />
 
       <motion.div
         initial={{ opacity: 0, y: 20 }}
@@ -139,14 +154,12 @@ export default function AddNetworkingClientPage() {
             >
               Cancel
             </button>
-
-            <button
-              type="submit"
-              disabled={loading}
-              className="px-4 py-2 bg-green-600 text-white rounded-lg hover:bg-green-700 transition disabled:opacity-50"
-            >
-              {loading ? "Saving..." : "Add Client"}
-            </button>
+<Button
+  type="submit"
+  label="Add client"
+  loading={loading}
+  disabled={!isFormValid}
+/>
           </div>
         </form>
       </motion.div>
