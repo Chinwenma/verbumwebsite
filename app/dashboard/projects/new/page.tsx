@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 
 import { toast } from "react-toastify";
 import { ProjectStatus } from "@/lib/projects/projects";
+import Button from "@/app/components/dashboard/btn/AddNewButton";
 
 export default function AddProjectPage() {
   const router = useRouter();
@@ -34,7 +35,9 @@ export default function AddProjectPage() {
     status.replace("_", " ").replace(/\b\w/g, (c) => c.toUpperCase());
 
   const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     setFormData((prev) => ({
       ...prev,
@@ -42,7 +45,6 @@ export default function AddProjectPage() {
     }));
   };
 
-  // ✅ Check if form is valid
   const isFormValid = useMemo(() => {
     return (
       formData.title &&
@@ -72,21 +74,21 @@ export default function AddProjectPage() {
         deadline: new Date(formData.deadline),
       };
 
-      // 👉 Replace with your API call
-      // await fetch("/api/projects", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/json" },
-      //   body: JSON.stringify(payload),
-      // });
 
-      console.log("Submitting:", payload);
+    console.log("Submitting:", payload);
 
-      toast.success("Project created successfully!");
+toast.success("Project created successfully!");
 
-      setTimeout(() => {
-        router.push("/dashboard/projects");
-      }, 1500);
-
+setFormData({
+  title: "",
+  client: "",
+  status: "" as ProjectStatus | "",
+  projectDescription: "",
+  startDate: "",
+  deadline: "",
+  budget: "",
+  amountPaid: "",
+});
     } catch (error) {
       toast.error("Something went wrong!");
     } finally {
@@ -96,113 +98,153 @@ export default function AddProjectPage() {
 
   return (
     <main className="p-6 md:p-10 max-w-3xl mx-auto">
-       <motion.div
+      <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
         className="bg-white rounded-2xl shadow-md p-6"
       >
-      <h2 className="text-2xl font-semibold mb-6">Add New Project</h2>
-
-      <form onSubmit={handleSubmit} className="space-y-4">
- <div>
-            <label className="block text-sm mb-1">Project Title</label>
-             <input
-          type="text"
-          name="title"
-          placeholder="Project Title"
-          value={formData.title}
-          onChange={handleChange}
-          className="w-full border px-3 py-2 rounded-lg"
-          required
-        />
-           
+        <h2 className="text-2xl font-semibold mb-6">Add New Project</h2>
+        <form onSubmit={handleSubmit} className="space-y-4">
+          {/* Project Title */}
+          <div>
+            <label className="block text-sm mb-1 font-medium">
+              Project Title
+            </label>
+            <input
+              type="text"
+              name="title"
+              value={formData.title}
+              onChange={handleChange}
+              className="w-full border px-3 py-2 rounded-lg"
+              required
+            />
           </div>
-       
-<div>
-            <label className="block text-sm mb-1">Client Name</label>
-        <input
-          type="text"
-          name="client"
-          placeholder="Client Name"
-          value={formData.client}
-          onChange={handleChange}
-          className="w-full border px-3 py-2 rounded-lg"
-        />
-        </div>
 
-        <select
-          name="status"
-          value={formData.status}
-          onChange={handleChange}
-          className="w-full border px-3 py-2 rounded-lg"
-        >
-          <option value="">Select Status</option>
-          {statuses.map((status) => (
-            <option key={status} value={status}>
-              {formatStatus(status)}
-            </option>
-          ))}
-        </select>
+          {/* Client Name */}
+          <div>
+            <label className="block text-sm mb-1 font-medium">
+              Client Name
+            </label>
+            <input
+              type="text"
+              name="client"
+              value={formData.client}
+              onChange={handleChange}
+              className="w-full border px-3 py-2 rounded-lg"
+              required
+            />
+          </div>
 
-        <textarea
-          name="projectDescription"
-          placeholder="Project Description"
-          value={formData.projectDescription}
-          onChange={handleChange}
-          rows={4}
-          className="w-full border px-3 py-2 rounded-lg"
-        />
+          {/* Status */}
+          <div>
+            <label className="block text-sm mb-1 font-medium">
+              Project Status
+            </label>
+            <select
+              name="status"
+              value={formData.status}
+              onChange={handleChange}
+              className="w-full border px-3 py-2 rounded-lg"
+              required
+            >
+              <option value="">Select Status</option>
+              {statuses.map((status) => (
+                <option key={status} value={status}>
+                  {formatStatus(status)}
+                </option>
+              ))}
+            </select>
+          </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <input
-            type="date"
-            name="startDate"
-            value={formData.startDate}
-            onChange={handleChange}
-            className="border px-3 py-2 rounded-lg"
-          />
+          {/* Dates */}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm mb-1 font-medium">
+                Start Date
+              </label>
+              <input
+                type="date"
+                name="startDate"
+                value={formData.startDate}
+                onChange={handleChange}
+                className="w-full border px-3 py-2 rounded-lg"
+                required
+              />
+            </div>
 
-          <input
-            type="date"
-            name="deadline"
-            value={formData.deadline}
-            onChange={handleChange}
-            className="border px-3 py-2 rounded-lg"
-          />
-        </div>
+            <div>
+              <label className="block text-sm mb-1 font-medium">Deadline</label>
+              <input
+                type="date"
+                name="deadline"
+                value={formData.deadline}
+                onChange={handleChange}
+                className="w-full border px-3 py-2 rounded-lg"
+                required
+              />
+            </div>
+          </div>
 
-        <div className="grid grid-cols-2 gap-4">
-          <input
-            type="number"
-            name="budget"
-            placeholder="Budget"
-            value={formData.budget}
-            onChange={handleChange}
-            className="border px-3 py-2 rounded-lg"
-          />
+          {/* Budget */}
+          <div className="grid grid-cols-2 gap-4">
+            <div>
+              <label className="block text-sm mb-1 font-medium">Budget</label>
+              <input
+                type="number"
+                name="budget"
+                value={formData.budget}
+                onChange={handleChange}
+                className="w-full border px-3 py-2 rounded-lg"
+                required
+              />
+            </div>
 
-          <input
-            type="number"
-            name="amountPaid"
-            placeholder="Amount Paid"
-            value={formData.amountPaid}
-            onChange={handleChange}
-            className="border px-3 py-2 rounded-lg"
-          />
-        </div>
+            <div>
+              <label className="block text-sm mb-1 font-medium">
+                Amount Paid
+              </label>
+              <input
+                type="number"
+                name="amountPaid"
+                value={formData.amountPaid}
+                onChange={handleChange}
+                className="w-full border px-3 py-2 rounded-lg"
+                required
+              />
+            </div>
+          </div>
 
-        <button
-          type="submit"
-          disabled={!isFormValid || loading}
-          className={`w-full py-3 rounded-lg text-white transition ${
-            !isFormValid || loading
-              ? "bg-gray-400 cursor-not-allowed"
-              : "bg-blue-600 hover:bg-blue-700"
-          }`}
-        >
-          {loading ? "Creating Project..." : "Create Project"}
-        </button>
-      </form>
+          {/* Description */}
+          <div>
+            <label className="block text-sm mb-1 font-medium">
+              Project Description
+            </label>
+            <textarea
+              name="projectDescription"
+              value={formData.projectDescription}
+              onChange={handleChange}
+              rows={4}
+              className="w-full border px-3 py-2 rounded-lg"
+              required
+            />
+          </div>
+          <div className="flex justify-end gap-3 pt-4">
+            <button
+              type="button"
+              onClick={() => router.back()}
+              className="px-4 py-2 border rounded-lg"
+            >
+              Cancel
+            </button>
+
+<Button
+  type="submit"
+  label="Create Project"
+  loading={loading}
+  disabled={!isFormValid}
+/>
+          </div>
+        </form>
       </motion.div>
     </main>
   );

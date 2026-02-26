@@ -2,9 +2,10 @@
 import { useRouter } from "next/navigation";
 
 import { useState, useMemo } from "react";
-import { Eye, X } from "lucide-react";
+import { Eye, Plus, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { WebClient, webClients } from "@/lib/web/clients";
+import Button from "@/app/components/dashboard/btn/AddNewButton";
 
 export default function WebClientsPage() {
   const router = useRouter();
@@ -20,8 +21,6 @@ const handleDeleteClient = () => {
 
   console.log("Deleting client:", deleteClient.id);
 
-  // later → call API
-  // await fetch(`/api/web-clients/${deleteClient.id}`, { method: "DELETE" })
 
   setDeleteClient(null);
   setSelectedClient(null);
@@ -44,19 +43,24 @@ const handleDeleteClient = () => {
 
   return (
     <main className="p-6">
-      <h2 className="text-2xl font-semibold mb-6">Web Clients</h2>
-
-      {/* Search */}
-      <input
-        type="text"
-        placeholder="Search web clients..."
-        value={search}
-        onChange={(e) => {
-          setSearch(e.target.value);
-          setCurrentPage(1);
-        }}
-        className="mb-4 w-full md:w-1/3 px-3 py-2 border rounded-lg"
-      />
+         <h2 className="text-2xl font-semibold mb-4">Web Clients</h2>
+                 <div className="flex justify-between items-center mb-4">
+                  <input
+             type="text"
+             placeholder="Search Web clients..."
+             value={search}
+             onChange={(e) => {
+               setSearch(e.target.value);
+               setCurrentPage(1);
+             }}
+             className="mb-4 w-full md:w-1/3 px-3 py-2 border rounded-lg"
+           />
+                  <Button
+            href="/dashboard/webdepartment/new"
+            label="New client"
+            icon={<Plus size={18} />}
+          />
+                 </div>
 
       {/* Table */}
       <div className="bg-white rounded-2xl shadow-sm overflow-x-auto">

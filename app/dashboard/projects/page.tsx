@@ -1,9 +1,11 @@
 "use client";
 import { useRouter } from "next/navigation";
 import { useState, useMemo } from "react";
-import { Eye, X } from "lucide-react";
+import { Eye, Plus, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { ClientProject, clientProjects, ProjectStatus } from "@/lib/projects/projects";
+import Button from "@/app/components/dashboard/btn/AddNewButton";
+import { toast } from "react-toastify";
 
 export default function ProjectPage() {
   const router = useRouter();
@@ -61,19 +63,35 @@ export default function ProjectPage() {
     currentPage * itemsPerPage
   );
 
-  const handleDeleteProject = () => {
-    if (!deleteProject) return;
-    console.log("Deleting project:", deleteProject.id);
-    setDeleteProject(null);
-    setSelectedProject(null);
-  };
+const handleDeleteProject = () => {
+  if (!deleteProject) return;
+
+  const confirmDelete = window.confirm(
+    "Are you sure you want to delete this project?"
+  );
+
+  if (!confirmDelete) return;
+
+  console.log("Deleting project:", deleteProject.id);
+
+  toast.success("Project deleted (frontend only)", {
+    position: "top-right",
+    autoClose: 1500,
+  });
+
+  setDeleteProject(null);
+  setSelectedProject(null);
+};
 
   return (
     <main className="p-6">
-      <h2 className="text-2xl font-semibold mb-6">Clients Projects</h2>
+<div className="flex justify-between items-center mb-6">
+  <h2 className="text-2xl font-semibold mb-4">Clients Projects</h2>
 
+ 
+</div>
       {/* Search + Status Filter */}
-      <div className="flex flex-col md:flex-row gap-4 mb-6">
+      <div className="flex flex-col items-center justify-center md:flex-row gap-4 mb-6">
         <input
           type="text"
           placeholder="Search projects..."
@@ -101,6 +119,11 @@ export default function ProjectPage() {
             </option>
           ))}
         </select>
+         <Button
+    href="/dashboard/projects/new"
+    label="New Project"
+    icon={<Plus size={18} />}
+  />
       </div>
 
       {/* Table */}
@@ -231,12 +254,12 @@ export default function ProjectPage() {
                   Edit Project
                 </button>
 
-                <button
-                  onClick={() => setDeleteProject(selectedProject)}
-                  className="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition"
-                >
-                  Delete
-                </button>
+               <button
+  onClick={handleDeleteProject}
+  className="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition"
+>
+  Delete
+</button>
               </div>
             </motion.div>
           </motion.div>

@@ -2,9 +2,10 @@
 import { useRouter } from "next/navigation";
 
 import { useState, useMemo } from "react";
-import { Eye, X } from "lucide-react";
+import { Eye, Plus, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { AcademyClient, AcademyClients } from "@/lib/academy/students";
+import AddNewButton from "@/app/components/dashboard/btn/AddNewButton";
 
 export default function AcademyClientsPage() {
   const router = useRouter();
@@ -58,12 +59,11 @@ export default function AcademyClientsPage() {
           }}
           className="mb-4 w-full md:w-1/3 px-3 py-2 border-2 rounded-lg"
         />
-        <button
-          onClick={() => router.push("/dashboard/academy/new")}
-          className="px-4 py-2 rounded-lg bg-red-600 text-white hover:bg-red-700 transition"
-        >
-          Create New Student
-        </button>
+        <AddNewButton
+          href="/dashboard/academy/new"
+          label="Create New Student"
+          icon={<Plus size={16} />}
+        />
       </div>
 
       {/* Table */}

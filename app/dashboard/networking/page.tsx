@@ -2,9 +2,11 @@
 import { useRouter } from "next/navigation";
 
 import { useState, useMemo } from "react";
-import { Eye, X } from "lucide-react";
+import { Eye, Plus, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { NetworkingClient, NetworkingClients } from "@/lib/net/clients";
+import AddNewButton from "@/app/components/dashboard/btn/AddNewButton";
+import Button from "@/app/components/dashboard/btn/AddNewButton";
 
 export default function NetworkingClientsPage() {
   const router = useRouter();
@@ -44,10 +46,11 @@ const handleDeleteClient = () => {
 
   return (
     <main className="p-6">
-      <h2 className="text-2xl font-semibold mb-6">Networking Clients</h2>
 
-      {/* Search */}
-      <input
+
+     <h2 className="text-2xl font-semibold mb-4">Networking Clients</h2>
+            <div className="flex justify-between items-center mb-4">
+             <input
         type="text"
         placeholder="Search Networking clients..."
         value={search}
@@ -57,6 +60,15 @@ const handleDeleteClient = () => {
         }}
         className="mb-4 w-full md:w-1/3 px-3 py-2 border rounded-lg"
       />
+             <Button
+       href="/dashboard/networking/new"
+       label="New client"
+       icon={<Plus size={18} />}
+     />
+            </div>
+
+   
+ 
 
       {/* Table */}
       <div className="bg-white rounded-2xl shadow-sm overflow-x-auto">
