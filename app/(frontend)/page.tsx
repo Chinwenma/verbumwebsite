@@ -11,8 +11,6 @@ export default function Home() {
   return (
     <>
       <Hero />
-
-
       <AboutSection />
       <ServicesSection />
       <VideoGallery />

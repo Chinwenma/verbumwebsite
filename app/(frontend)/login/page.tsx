@@ -1,17 +1,18 @@
 "use client";
-import { useState, ChangeEvent, FormEvent } from "react";
+import { useState, ChangeEvent, SubmitEvent } from "react";
 import { useRouter } from "next/navigation";
+import { signIn } from "next-auth/react";
 
 type FormData = {
-  username: string;
+  email: string;
   password: string;
 };
 
 const Page = () => {
   const router = useRouter();
-
+  const [error, setError] = useState("");
   const [formData, setFormData] = useState<FormData>({
-    username: "",
+    email: "",
     password: "",
   });
 
@@ -25,18 +26,33 @@ const Page = () => {
     }));
   };
 
-  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: SubmitEvent) => {
     e.preventDefault();
     setLoading(true);
+    e.preventDefault();
+    setError("");
 
-    // simulate API call delay (frontend only for now)
-    setTimeout(() => {
-      console.log("Login details:", formData);
+    try {
+      const result = await signIn("credentials", {
+        ...formData,
+        redirect: false,
+      });
+
+      if (result?.error) {
+        if (result.error.includes("CredentialsSignin")) {
+          setError("Invalid email or password");
+        } else {
+          setError(result.error || "Something went wrong. Please try again.");
+        }
+      } else {
+        router.push("/dashboard");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred");
+      console.error(err);
+    } finally {
       setLoading(false);
-
-      // redirect to dashboard
-      router.push("/dashboard");
-    }, 1500);
+    }
   };
 
   return (
@@ -49,13 +65,18 @@ const Page = () => {
           Staff Login
         </h2>
 
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-6 text-center">
+            {error}
+          </div>
+        )}
         {/* Username */}
         <div className="mb-4">
           <label className="block mb-1 text-sm font-medium">Username</label>
           <input
             type="text"
-            name="username"
-            value={formData.username}
+            name="email"
+            value={formData.email}
             onChange={handleChange}
             required
             className="w-full px-3 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-red-500"
