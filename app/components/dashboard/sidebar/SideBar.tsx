@@ -21,40 +21,26 @@ import {
 } from "lucide-react";
 import { signOut } from "next-auth/react";   // ← import this
 import { Role } from "@/models/User";
-
-const roleBasedNavItems: Record<string, Role[]> = {
-  "/dashboard":               ["admin", "accountant", "networking", "web", "cafe", "instructor"],
-  "/dashboard/webdepartment": ["admin", "web"],
-  "/dashboard/networking":    ["admin", "networking"],
-  "/dashboard/accounts":      ["admin", "accountant"],
-  "/dashboard/academy":       ["admin", "instructor"],
-  "/dashboard/projects":      ["admin", "web", "networking"],
-  "/dashboard/cafe-sales":    ["admin", "cafe"],
-  "/dashboard/settings":      ["admin", "accountant", "networking", "web", "cafe", "instructor"],
-};
+import { routeAccessMap } from "@/lib/route-access";
 
 const navItems = [
-  { name: "Overview",    href: "/dashboard",           icon: Home },
+  { name: "Overview", href: "/dashboard", icon: Home },
   { name: "Web Department", href: "/dashboard/webdepartment", icon: Users },
-  { name: "Networking",  href: "/dashboard/networking",   icon: Network },
-  { name: "Accounts",    href: "/dashboard/accounts",     icon: CreditCard },
-  { name: "Academy",     href: "/dashboard/academy",      icon: GraduationCap },
-  { name: "Projects",    href: "/dashboard/projects",     icon: Briefcase },
-  { name: "Cafe Sales",  href: "/dashboard/cafe-sales",   icon: Coffee },
-  { name: "Settings",    href: "/dashboard/settings",     icon: Settings },
+  { name: "Networking", href: "/dashboard/networking", icon: Network },
+  { name: "Accounts", href: "/dashboard/accounts", icon: CreditCard },
+  { name: "Academy", href: "/dashboard/academy", icon: GraduationCap },
+  { name: "Projects", href: "/dashboard/projects", icon: Briefcase },
+  { name: "Cafe Sales", href: "/dashboard/cafe-sales", icon: Coffee },
+  { name: "Settings", href: "/dashboard/settings", icon: Settings },
 ];
 
-type SidebarProps = {
-  role: Role;
-};
-
-export function Sidebar({ role }: SidebarProps) {
+export function Sidebar({ role }: { role: Role }) {
   const pathname = usePathname();
   const [collapsed, setCollapsed] = useState(false);
   const [mobileOpen, setMobileOpen] = useState(false);
 
   const visibleNavItems = navItems.filter((item) =>
-    roleBasedNavItems[item.href]?.includes(role)
+    routeAccessMap[item.href]?.includes(role)
   );
 
   const handleLogout = () => {

@@ -4,22 +4,23 @@ import { useRouter } from "next/navigation";
 import { useState, useMemo } from "react";
 import { Eye, Plus, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { WebClient, webClients } from "@/lib/web/clients";
 import Button from "@/app/components/dashboard/btn/AddNewButton";
+import { Client } from "@/models/Client";
+import { clients } from "@/lib/clients";
 
 export default function WebClientsPage() {
   const router = useRouter();
-const [deleteClient, setDeleteClient] = useState<any | null>(null);
+const [deleteClient, setDeleteClient] = useState<Client | null>(null);
 
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedClient, setSelectedClient] = useState<WebClient | null>(null);
+  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
 
   const itemsPerPage = 5;
 const handleDeleteClient = () => {
   if (!deleteClient) return;
 
-  console.log("Deleting client:", deleteClient.id);
+  console.log("Deleting client:", deleteClient._id);
 
 
   setDeleteClient(null);
@@ -28,8 +29,8 @@ const handleDeleteClient = () => {
 
   // Search
   const filteredClients = useMemo(() => {
-    return webClients.filter((client) =>
-      client.name.toLowerCase().includes(search.toLowerCase())
+    return clients.filter((client) =>
+      client.name.toLowerCase().includes(search.toLowerCase()) && client.dept === "web"
     );
   }, [search]);
 
@@ -76,7 +77,7 @@ const handleDeleteClient = () => {
 
           <tbody>
             {paginatedClients.map((client) => (
-              <tr key={client.id} className="border-t hover:bg-gray-50">
+              <tr key={client._id} className="border-t hover:bg-gray-50">
                 <td className="p-3 font-medium">{client.name}</td>
                 <td className="p-3">{client.contact}</td>
                 <td className="p-3">{client.expiry}</td>
@@ -158,7 +159,7 @@ const handleDeleteClient = () => {
               {/* Actions */}
               <div className="flex items-center justify-end gap-3">
                 <button
-                  onClick={() => router.push(`/dashboard/webdepartment/${selectedClient.id}/edit`)}
+                  onClick={() => router.push(`/dashboard/webdepartment/${selectedClient._id}/edit`)}
                   className="px-4 py-2 rounded-lg cursor-pointer bg-green-600 text-white hover:bg-green-700 transition"
                 >
                   Edit Client

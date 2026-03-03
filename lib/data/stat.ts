@@ -1,5 +1,3 @@
-// lib/dashboard-data.ts
-
 export interface StatItem {
   title: string;
   value: number;
@@ -18,7 +16,7 @@ export const stats: StatItem[] = [
     icon: "web",
   },
   {
-    title: "Networking Clients",
+    title: "Network Clients",
     value: 30,
     icon: "network",
   },

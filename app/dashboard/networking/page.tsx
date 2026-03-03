@@ -1,38 +1,34 @@
 "use client";
 import { useRouter } from "next/navigation";
-
 import { useState, useMemo } from "react";
 import { Eye, Plus, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { NetworkingClient, NetworkingClients } from "@/lib/net/clients";
-import AddNewButton from "@/app/components/dashboard/btn/AddNewButton";
 import Button from "@/app/components/dashboard/btn/AddNewButton";
+import { clients } from "@/lib/clients";
+import { Client } from "@/models/Client";
 
 export default function NetworkingClientsPage() {
   const router = useRouter();
-const [deleteClient, setDeleteClient] = useState<any | null>(null);
+  const [deleteClient, setDeleteClient] = useState<Client | null>(null);
 
   const [search, setSearch] = useState("");
   const [currentPage, setCurrentPage] = useState(1);
-  const [selectedClient, setSelectedClient] = useState<NetworkingClient | null>(null);
+  const [selectedClient, setSelectedClient] = useState<Client | null>(null);
 
   const itemsPerPage = 5;
-const handleDeleteClient = () => {
-  if (!deleteClient) return;
+  const handleDeleteClient = () => {
+    if (!deleteClient) return;
 
-  console.log("Deleting client:", deleteClient.id);
+    console.log("Deleting client:", deleteClient._id);
 
-  // later → call API
-  // await fetch(`/api/Networking-clients/${deleteClient.id}`, { method: "DELETE" })
-
-  setDeleteClient(null);
-  setSelectedClient(null);
-};
+    setDeleteClient(null);
+    setSelectedClient(null);
+  };
 
   // Search
   const filteredClients = useMemo(() => {
-    return NetworkingClients.filter((client) =>
-      client.name.toLowerCase().includes(search.toLowerCase())
+    return clients.filter((client) =>
+      client.name.toLowerCase().includes(search.toLowerCase()) && client.dept === "networking"
     );
   }, [search]);
 
@@ -46,29 +42,27 @@ const handleDeleteClient = () => {
 
   return (
     <main className="p-6">
+      <h2 className="text-2xl font-semibold mb-4">Networking Clients</h2>
+      <div className="flex justify-between items-center mb-4">
+        <input
+          type="text"
+          placeholder="Search Networking clients..."
+          value={search}
+          onChange={(e) => {
+            setSearch(e.target.value);
+            setCurrentPage(1);
+          }}
+          className="mb-4 w-full md:w-1/3 px-3 py-2 border rounded-lg"
+        />
+        <Button
+          href="/dashboard/networking/new"
+          label="New client"
+          icon={<Plus size={18} />}
+        />
+      </div>
 
 
-     <h2 className="text-2xl font-semibold mb-4">Networking Clients</h2>
-            <div className="flex justify-between items-center mb-4">
-             <input
-        type="text"
-        placeholder="Search Networking clients..."
-        value={search}
-        onChange={(e) => {
-          setSearch(e.target.value);
-          setCurrentPage(1);
-        }}
-        className="mb-4 w-full md:w-1/3 px-3 py-2 border rounded-lg"
-      />
-             <Button
-       href="/dashboard/networking/new"
-       label="New client"
-       icon={<Plus size={18} />}
-     />
-            </div>
 
-   
- 
 
       {/* Table */}
       <div className="bg-white rounded-2xl shadow-sm overflow-x-auto">
@@ -84,7 +78,7 @@ const handleDeleteClient = () => {
 
           <tbody>
             {paginatedClients.map((client) => (
-              <tr key={client.id} className="border-t hover:bg-gray-50">
+              <tr key={client._id} className="border-t hover:bg-gray-50">
                 <td className="p-3 font-medium">{client.name}</td>
                 <td className="p-3">{client.contact}</td>
                 <td className="p-3">{client.expiry}</td>
@@ -126,7 +120,7 @@ const handleDeleteClient = () => {
       </div>
 
       {/* Modal */}
-        <AnimatePresence>
+      <AnimatePresence>
         {selectedClient && (
           <motion.div
             initial={{ opacity: 0 }}
@@ -166,7 +160,7 @@ const handleDeleteClient = () => {
               {/* Actions */}
               <div className="flex items-center justify-end gap-3">
                 <button
-                  onClick={() => router.push(`/dashboard/networking/${selectedClient.id}/edit`)}
+                  onClick={() => router.push(`/dashboard/networking/${selectedClient._id}/edit`)}
                   className="px-4 py-2 rounded-lg cursor-pointer bg-green-600 text-white hover:bg-green-700 transition"
                 >
                   Edit Client

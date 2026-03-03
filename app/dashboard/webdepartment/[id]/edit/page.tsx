@@ -3,18 +3,19 @@
 import { useState, useEffect } from "react";
 import { useRouter, useParams } from "next/navigation";
 import { motion } from "framer-motion";
-import { WebClient, webClients } from "@/lib/web/clients";
-// import { WebClients, WebClient } from "@/lib/web/clients";
+import { Client } from "@/models/Client";
+import { clients } from "@/lib/clients";
 
 export default function EditWebClientPage() {
   const router = useRouter();
   const params = useParams();
-  const clientId = Number(params.id); // convert from string to number
+  const clientId = params.id;
 
-  const [formData, setFormData] = useState<WebClient>({
-    id: 0,
+  const [formData, setFormData] = useState<Client>({
+    _id: '',
     name: "",
     contact: "",
+    dept: "web",
     expiry: "",
     address: "",
     domain: "",
@@ -23,8 +24,8 @@ export default function EditWebClientPage() {
 
   // ✅ Load existing client
   useEffect(() => {
-    const existingClient = webClients.find(
-      (client) => client.id === clientId
+    const existingClient = clients.find(
+      (client) => client._id === clientId && client.dept === "web"
     );
 
     if (existingClient) {

@@ -1,0 +1,66 @@
+import { Client } from "@/models/Client";
+
+export const clients: Client[] = [
+  {
+    _id: "net-1",
+    name: "ABC Ventures",
+    contact: "+234 801 234 5678",
+    expiry: "2026-05-10",
+    address: "12 Admiralty Way, Lekki",
+    dept: "networking",
+    domain: "www.abcventures.com",
+    projectDescription: "Corporate Networkingsite with CMS, blog and payment integration",
+  },
+  {
+    _id: "net-2",
+    name: "Prime Tech",
+    contact: "+234 809 111 2222",
+    expiry: "2026-03-22",
+    address: "Ikeja, Lagos",
+    dept: "networking",
+    domain: "www.primetech.io",
+    projectDescription: "Startup landing page + dashboard",
+  },
+  {
+    _id: "net-3",
+    name: "Soft Solutions",
+    contact: "+234 813 333 4444",
+    expiry: "2026-08-01",
+    address: "Abuja",
+    dept: "networking",
+    domain: "www.softsolutions.ng",
+    projectDescription: "Company portfolio + booking system",
+  },
+
+  // Web department clients
+  {
+    _id: "web-1",
+    name: "ABC Ventures",
+    contact: "+234 801 234 5678",
+    expiry: "2026-05-10",
+    address: "12 Admiralty Way, Lekki",
+    dept: "web",
+    domain: "www.abcventures.com",
+    projectDescription: "Corporate website with CMS, blog and payment integration",
+  },
+  {
+    _id: "web-2",
+    name: "Prime Tech",
+    contact: "+234 809 111 2222",
+    expiry: "2026-03-22",
+    address: "Ikeja, Lagos",
+    dept: "web",
+    domain: "www.primetech.io",
+    projectDescription: "Startup landing page + dashboard",
+  },
+  {
+    _id: "web-3",
+    name: "Soft Solutions",
+    contact: "+234 813 333 4444",
+    expiry: "2026-08-01",
+    address: "Abuja",
+    dept: "web",
+    domain: "www.softsolutions.ng",
+    projectDescription: "Company portfolio + booking system",
+  },
+];

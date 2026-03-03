@@ -15,9 +15,9 @@ export default async function DashboardLayout({
     redirect("/login")
   }
   return (
-    <div className="flex h-screen bg-gray-100">
+    <div className="flex h-screen overflow-y-hidden bg-gray-100">
       <Sidebar role={session.user.role as Role} />
-      <main className="flex-1 overflow-y-hidden p-4 sm:p-6">
+      <main className="flex-1 p-4 sm:p-6 overflow-y-auto">
         {children}
       </main>
     </div>

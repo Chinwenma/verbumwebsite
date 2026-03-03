@@ -5,7 +5,14 @@ export type RouteAccess = {
 };
 
 export const routeAccessMap: RouteAccess = {
-  "/dashboard": ["admin", "accountant", "networking", "web", "cafe", "instructor"],
+  "/dashboard": [
+    "admin",
+    "accountant",
+    "networking",
+    "web",
+    "cafe",
+    "instructor",
+  ],
   "/dashboard/academy": ["admin", "instructor"],
   "/dashboard/accounts": ["admin", "accountant"],
   "/dashboard/cafe": ["admin", "cafe"],

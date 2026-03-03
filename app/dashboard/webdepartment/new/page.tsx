@@ -67,7 +67,7 @@ export default function AddWebClientPage() {
         projectDescription: "",
       });
 
-    } catch (error) {
+    } catch {
       toast.error("Something went wrong. Try again.");
     } finally {
       setLoading(false);
