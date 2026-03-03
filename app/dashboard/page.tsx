@@ -13,9 +13,8 @@ const iconMap = {
 
 export default function Home() {
   return (
-    <main className="p-4 sm:p-6 md:p-8 max-h-screen">
+    <div className="p-4 sm:p-6 md:p-8 max-h-screen">
       <h2 className="text-2xl font-semibold mb-6">Dashboard Overview</h2>
-
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
         {stats.map((item, index) => {
           const Icon = iconMap[item.icon as keyof typeof iconMap];
@@ -42,6 +41,6 @@ export default function Home() {
           );
         })}
       </div>
-    </main>
+    </div>
   );
 }
